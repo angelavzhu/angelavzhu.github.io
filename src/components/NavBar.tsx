@@ -20,11 +20,10 @@ export default function Header(props: HeaderProps) {
         }}>
             <Link to={"/"}> Logo </Link>
             <Box>
-                <Button> <Link to={"/"}> Work </Link> </Button>
-                <Button> <Link to={"/about"}> About </Link> </Button>
-                <Button> <Link to={"/play"}> Play </Link> </Button>
-                <Button> <Link to={"/resume"}> Resume </Link> </Button>
-
+                <Button href={"/"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>Work </Typography></Button>
+                <Button href={"/about"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>About </Typography></Button>
+                <Button href={"/play"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>Play </Typography></Button>
+                <Button href={"/resume"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>Resume </Typography></Button>
             </Box>
         </Box>
     );

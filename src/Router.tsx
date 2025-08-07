@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const theme = createTheme({
   typography: {
     accent: {
-      fontFamily: "Playwrite AU QLD, Lunasima",
+      fontFamily: "Marcellus, Lunasima",
       fontSize: "30px",
       fontWeight: "normal"
     },

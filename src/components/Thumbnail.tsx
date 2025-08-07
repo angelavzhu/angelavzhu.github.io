@@ -23,10 +23,9 @@ export default function Thumbnail(props: ThumbnailProps) {
                 flexDirection: 'column',
             }}>
                 <Typography variant="body1" sx={{ textTransform: 'none', color: 'black' }}> {props.name} </Typography>
-                <Box sx={{
-                    backgroundColor: 'red',
-                    width: '100%',
-                    height: '100%'
+                <img src={props.imgsrc} style={{
+                    width: "100%",
+                    objectFit: 'cover'
                 }} />
                 <Typography variant="body2" sx={{ textTransform: 'none', color: 'black' }}> {props.description} </Typography>
                 <Typography variant="body2" sx={{ textTransform: 'none', color: 'black' }}> {props.date} </Typography>

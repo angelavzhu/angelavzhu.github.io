@@ -5,6 +5,10 @@ import Umamusume from "./assets/about/Umamusume.jpg"
 import BOTW from "./assets/about/BOTW.jpg"
 import Morimens from "./assets/about/Morimens.jpg"
 import Persona from "./assets/about/Persona5.jpg"
+import headshot from "./assets/about/headshot.JPG"
+import img1 from "./assets/about/img1.jpg"
+import img2 from "./assets/about/img2.jpg"
+import img3 from "./assets/about/img3.jpg"
 
 export default function Evently() {
     return (
@@ -26,17 +30,17 @@ export default function Evently() {
                     my: '30px'
                 }}>
                     <Typography variant="body1"> Hello there! I’m Angela, an accent-less Long Islander, programmer, and artist. I am a third-year student at Cornell University majoring in Information Science with minors in Computer Science and Game Design. </Typography>
-                    <Typography variant="body1"> My inner artist yearns to find the perfect balance between usability and creativity. I aim to create human-centered products that are accessible and intuitive to use, but still challenge existing design patterns.  </Typography>
-                    <Box sx={{
+                    <Typography variant="body1" marginBottom='20px'> My inner artist yearns to find the perfect balance between usability and creativity. I aim to create human-centered products that are accessible and intuitive to use, but still challenge existing design patterns.  </Typography>
+                    <img src={img3} style={{
                         width: '100%',
-                        height: '100px',
-                        backgroundColor: 'yellow'
+                        objectFit: 'cover'
+
                     }} />
                 </Box>
-                <Box sx={{
-                    width: '50%',
-                    height: '300px',
-                    backgroundColor: 'orange'
+                <img src={headshot} style={{
+                    width: '40%',
+                    objectFit: 'cover'
+
                 }} />
             </Box>
 
@@ -47,15 +51,15 @@ export default function Evently() {
                 gap: '8%',
                 my: '30px'
             }}>
-                <Box sx={{
-                    width: '50%',
-                    height: '200px',
-                    backgroundColor: "yellow",
+                <img src={img1} style={{
+                    width: '24%',
+                    objectFit: 'cover'
+
                 }} />
-                <Box sx={{
-                    width: '50%',
-                    height: '200px',
-                    backgroundColor: "yellow",
+                <img src={img2} style={{
+                    width: '24%',
+                    objectFit: 'cover'
+
                 }} />
                 <Box sx={{
                     display: 'flex',
@@ -64,7 +68,7 @@ export default function Evently() {
                     flexDirection: 'column',
                     gap: '30px'
                 }}>
-                    <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or throwing pots at my local ceramics studio.</Typography>
+                    <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or reminiscing on my time in Rome.</Typography>
                     <Typography variant="body1"> I love all things art, from the clarinet to sculpture, and am always willing to talk about my extensive tea collection. </Typography>
                 </Box>
 
