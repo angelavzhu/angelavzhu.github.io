@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Stack } from '@mui/material';
 import { Link } from "react-router-dom"
 import lilypads from "./assets/lilypads.jpg"
 import Thumbnail from "./components/Thumbnail"
@@ -6,6 +6,8 @@ import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
 
 import evently from './assets/evently/banner.png'
+import crc from './assets/CRSite/thumbnail.png'
+import algolink from './assets/AlgoLink/Banner.png'
 
 export default function Home() {
   return (
@@ -30,6 +32,7 @@ export default function Home() {
         mx: '80px',
         my: '12px',
         overflowY: 'scroll',
+        flexWrap: { xs: 'wrap', sm: 'wrap', md: 'nowrap', lg: 'nowrap' },
         gap: '32px',
         display: 'flex',
         flexDirection: 'row',
@@ -42,18 +45,25 @@ export default function Home() {
         <Box sx={{
           display: 'flex',
           alignItems: 'left',
-          justifyContent: 'center',
+          justifyContent: 'space-between',
           overflowY: 'auto',
-          position: 'sticky',
+          position: { xs: 'relative', s: 'relative', md: 'sticky', lg: 'sticky' },
           top: 0,
           flexDirection: 'column',
           marginLeft: '2%',
-          width: '45%',
+          py: '40px',
+          width: { xs: '100%', s: '100%', md: '45%', lg: '45%' },
         }}>
-          <Typography variant="accent" fontSize="60px"> Angela Zhu,</Typography>
-          <Typography variant="accent" fontFamily="Lunasima">product designer & front-end developer</Typography>
-          <Typography my="30px" variant="heading3"> Designing intuitive and accessible products, with a touch of humanity.</Typography>
-          <Typography variant="body1"> <Link to={"/evently"}>See All &gt;</Link> </Typography>
+          <Stack>
+            <Typography variant="accent" fontSize="60px"> Angela Zhu,</Typography>
+            <Typography variant="accent" fontFamily="Lunasima">product designer & front-end developer</Typography>
+            <Typography my="30px" variant="heading3"> Designing intuitive and accessible products, with a touch of humanity.</Typography>
+          </Stack>
+
+          <Button href={"/work"} width="100%">
+            <Typography variant="body1" textTransform="none" textAlign="left" width="100%" color="black">
+              See All &gt;</Typography>
+          </Button>
         </Box>
 
         {/* rhs */}
@@ -61,17 +71,17 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           height: '100%',
-          width: '50%',
+          width: { xs: '100%', s: '100%', md: '50%', lg: '50%' },
           gap: '24px',
           paddingBottom: '20%'
         }}>
-          <Thumbnail height="60vh" name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" />
-          <Thumbnail height="60vh" name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" />
-          <Thumbnail height="60vh" name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" />
-          <Thumbnail height="60vh" name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" />
+          <Thumbnail height="300px" name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" />
+          <Thumbnail height="300px" name="Combat Robotics @ Cornell" imgsrc={crc} date="Jun - Aug 2025" description="Modernizing the team’s website without sacrificing its personality." link="/crc" />
+          <Thumbnail height="300px" name="AlgoLink" imgsrc={algolink} date="May 2025 - present" description="Recruitment done right. Iterating and finalizing product designs for AlgoLink’s jobs and connections features, onboarding, and more." link="https://www.algolink.net/" />
+          <Thumbnail height="300px" name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" />
         </Box>
       </Box>
-      <Footer />
+      <Footer color="black" />
 
     </Box >
   )

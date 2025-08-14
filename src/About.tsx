@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom"
 
+import name from "./assets/about/name.png"
 import Umamusume from "./assets/about/Umamusume.jpg"
 import BOTW from "./assets/about/BOTW.jpg"
 import Morimens from "./assets/about/Morimens.jpg"
@@ -13,8 +14,15 @@ import img3 from "./assets/about/img3.jpg"
 export default function Evently() {
     return (
         <Box marginTop="80px" mx="10%" >
-            <Typography variant="accent" fontFamily="Mea Culpa"> Angela Zhu, </Typography>
-            <Typography variant="heading1"> gacha addict and sticker hoarder </Typography>
+            <Box sx={{
+                alignItems: 'center',
+                display: 'flex',
+                marginBottom: '-10px'
+            }}>
+                <img src={name} width="300px" />
+                <Typography variant="heading1">, gacha addict and sticker hoarder </Typography>
+
+            </Box>
 
             {/* top section */}
             <Box sx={{
@@ -38,6 +46,8 @@ export default function Evently() {
                     }} />
                 </Box>
                 <img src={headshot} style={{
+                    paddingTop: '24px',
+                    paddingBottom: '24px',
                     width: '40%',
                     objectFit: 'cover'
 
