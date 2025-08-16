@@ -2,6 +2,8 @@ import { Box, Typography, Stack } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from "react-router-dom"
 
+import VideoCarousel from '../components/VideoCarousel'
+
 import NME from '../assets/Evently/NME.JPG'
 import HMW from '../assets/Evently/HMW.png'
 import banner from '../assets/Evently/banner.png'
@@ -540,7 +542,7 @@ export default function Evently() {
                 }}>
                     <Typography variant="heading2"> Final Prototype </Typography>
                     <Typography variant="heading3" fontStyle="italic"> Synthesizing a final product based on our findings </Typography>
-                    Carousel
+                    <VideoCarousel />
                 </Box >
 
                 {/* Reflection */}
