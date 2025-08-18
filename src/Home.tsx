@@ -27,8 +27,8 @@ export default function Home() {
       backgroundPosition: 'center'
     }}>
       <Box sx={{
-        backgroundColor: 'rgba(167, 205, 228, 0.5)',
-        backdropFilter: 'blur(4px) ',
+        // backgroundColor: 'rgba(167, 205, 228, 0.5)',
+        // backdropFilter: 'blur(4px) ',
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -51,26 +51,43 @@ export default function Home() {
           <Box sx={{
             display: 'flex',
             alignItems: 'left',
-            justifyContent: 'space-between',
+            justifyContent: 'top',
             overflowY: 'auto',
+            backdropFilter: 'blur(12px) ',
+            paddingLeft: '12px',
             position: { xs: 'relative', s: 'relative', md: 'sticky', lg: 'sticky' },
             top: 0,
+            borderRadius: '12px',
             flexDirection: 'column',
             marginLeft: '2%',
             py: '40px',
             width: { xs: '100%', s: '100%', md: '45%', lg: '45%' },
           }}>
-            <Stack marginBottom="20px">
-              <Typography variant="accent" fontSize="60px"> Angela Zhu,</Typography>
-              <Typography my="20px" variant="accent" fontFamily="Lunasima">product designer & front-end developer</Typography>
+            <Stack>
+              <Typography variant="accent" fontSize="50px"> Angela Zhu,</Typography>
+              <Typography my="20px" variant="accent" fontSize="50px" fontFamily="Lunasima" fontWeight="bold" >product designer & front-end developer</Typography>
               <Typography variant="heading3"> Designing intuitive and accessible products, with a touch of humanity.</Typography>
             </Stack>
             <Stack direction="row" gap="4px" alignItems="center">
-              <Button href={"/work"} >
-                <Typography variant="body1" fontStyle="italic" textTransform="none" textAlign="left" width="100%" color="black">
+              <Button variant='outlined' href={"/work"} sx={{
+                borderWidth: "2px",
+                borderRadius: '20px',
+                borderColor: 'black',
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                backdropFilter: 'blur(4px) ',
+                marginTop: '32px',
+                ":hover": {
+                  backgroundColor: 'white',
+                  filter: 'invert(1)'
+                }
+              }
+              } >
+                <Typography variant="body1" textTransform="none" textAlign="center" width="100%" color="black">
                   See All</Typography>
               </Button>
-              <ChevronRightIcon />
+              {/* <ChevronRightIcon /> */}
             </Stack>
 
           </Box>

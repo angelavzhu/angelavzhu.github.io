@@ -47,8 +47,8 @@ export default function Evently() {
                     my: '30px'
                 }}>
                     <Typography variant="body1"> Hello there! I’m Angela, an accent-less Long Islander, programmer, and artist. I am a third-year student at Cornell University majoring in Information Science with minors in Computer Science and Game Design. </Typography>
-                    <Typography variant="body1" marginBottom='20px'> From my work, I've realized that product design must intersect with business-- understanding what will succeed in the market, as well as knowing how to best balance profitability and user experience, are essential in today's saturated market.
-                        With this in mind, I seek to create human-centered products are accessible and intuitive to use, but still challenge existing design patterns.  </Typography>
+                    <Typography variant="body1" marginBottom='20px'> From my work, I've realized that product design must intersect with business-- especially in today's saturated market. My goal as a designer is to be able to balance all aspects of design,
+                        from profitability to accessibility, to create human-centered products are intuitive to use, but still challenge existing design patterns.  </Typography>
                     <img src={img3} style={{
                         width: '100%',
                         objectFit: 'cover'
