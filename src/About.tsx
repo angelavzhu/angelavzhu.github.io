@@ -10,7 +10,6 @@ import headshot from "./assets/about/headshot.JPG"
 import img1 from "./assets/about/img1.jpg"
 import img2 from "./assets/about/img2.jpg"
 import img3 from "./assets/about/img3.jpg"
-import background from "./assets/about/lilypad.png"
 
 export default function Evently() {
     return (
@@ -47,8 +46,8 @@ export default function Evently() {
                     my: '30px'
                 }}>
                     <Typography variant="body1"> Hello there! I’m Angela, an accent-less Long Islander, programmer, and artist. I am a third-year student at Cornell University majoring in Information Science with minors in Computer Science and Game Design. </Typography>
-                    <Typography variant="body1" marginBottom='20px'> From my work, I've realized that product design must intersect with business-- especially in today's saturated market. My goal as a designer is to be able to balance all aspects of design,
-                        from profitability to accessibility, to create human-centered products are intuitive to use, but still challenge existing design patterns.  </Typography>
+                    <Typography variant="body1">  </Typography>
+                    <Typography variant="body1" marginBottom='20px'>   </Typography>
                     <img src={img3} style={{
                         width: '100%',
                         objectFit: 'cover'
@@ -109,8 +108,10 @@ export default function Evently() {
                     flexDirection: 'column',
                     gap: '30px'
                 }}>
-                    <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or reminiscing on my time in Rome.</Typography>
-                    <Typography variant="body1"> I love all things art, from the clarinet to sculpture, and am always willing to talk about my extensive tea collection. </Typography>
+                    {/* <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or reminiscing on my time in Rome.</Typography> */}
+                    <Typography variant="body1"> From my work, I've realized that product design must intersect with business, especially in today's saturated market. However, at the end of the day, products are made to be used-- by humans. </Typography>
+                    <Typography variant="body1"> My goal as a designer is to be able to balance all aspects of design,
+                        from visuals to accessibility, to create human-centered products are intuitive to use, but still challenge existing design patterns.</Typography>
                 </Box>
 
             </Box>
