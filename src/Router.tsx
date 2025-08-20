@@ -13,6 +13,7 @@ import Resume from "./Resume"
 
 import Evently from "./case-studies/Evently"
 import CRC from "./case-studies/CRC"
+import AlgoLink from "./case-studies/AlgoLink"
 // ============ end imports ==============
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,29 +21,29 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const theme = createTheme({
   typography: {
     accent: {
-      fontFamily: "Marcellus, Lunasima",
+      fontFamily: "Marcellus",
       fontSize: "2rem",
       fontWeight: "normal"
     },
     heading1: {
-      fontFamily: "Work Sans, Lunasima",
+      fontFamily: "Marcellus",
       fontSize: "1.75rem",
       fontWeight: "normal"
     },
     heading2: {
-      fontFamily: "Lunasima",
+      fontFamily: "Libre Franklin",
       fontSize: "1.5rem"
     },
     heading3: {
-      fontFamily: "Lunasima",
+      fontFamily: "Libre Franklin",
       fontSize: "1.25rem"
     },
     body1: {
-      fontFamily: "Lunasima, sans-serif",
+      fontFamily: "Libre Franklin",
       fontSize: "1rem"
     },
     body2: {
-      fontFamily: "Lunasima, sans-serif",
+      fontFamily: "Libre Franklin",
       fontSize: "0.8rem"
     },
 
@@ -60,6 +61,7 @@ export default function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/evently" element={<Evently />} />
           <Route path="/crc" element={<CRC />} />
+          <Route path="/algolink" element={<AlgoLink />} />
           <Route path="/about" element={<About />} />
           <Route path="/play" element={<Play />} />
           <Route path="/resume" element={<Resume />} />

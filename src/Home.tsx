@@ -1,6 +1,7 @@
 import { Box, Typography, Button, Stack } from '@mui/material';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from "react-router-dom"
+
 import lilypads from "./assets/lilypads.png"
 import lilybutton from "./assets/lilybutton.png"
 import lilybuttonSelected from "./assets/lilybuttonselected.png"
@@ -65,7 +66,7 @@ export default function Home() {
           }}>
             <Stack>
               <Typography variant="accent" fontSize="60px"> Angela Zhu,</Typography>
-              <Typography my="20px" variant="accent" fontFamily="Lunasima" >product designer & front-end developer</Typography>
+              <Typography my="20px" variant="accent">product designer & front-end developer</Typography>
               <Typography variant="heading3"> Designing intuitive and accessible products, with a touch of humanity.</Typography>
             </Stack>
 
@@ -82,8 +83,8 @@ export default function Home() {
           }}>
             <Thumbnail name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" />
             <Thumbnail name="Combat Robotics @ Cornell" imgsrc={crc} date="Jun - Aug 2025" description="Modernizing the team’s website while maintaining its personality." link="/crc" />
-            <Thumbnail name="AlgoLink" imgsrc={algolink} date="May 2025 - present" description="Recruitment done right. Iterating and finalizing product designs for AlgoLink’s jobs and connections features, onboarding, and more." link="https://www.algolink.net/" />
-            <Thumbnail name="Skillful" imgsrc={skillful} date="April 2025" description="Submission to Figma 2025 Designathon (FigBuild), designed a skill trading marketplace in a team of 4 designers." link="https://www.figma.com/deck/WAB2nOFTjxApO9CxSsv9QR/FigBuild-2025--Skillful?node-id=1-130&viewport=-17%2C-67%2C0.35&t=CeJ8aAAFRKXAPclv-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" />
+            <Thumbnail name="AlgoLink" imgsrc={algolink} date="May 2025 - present" description="Recruitment done right. Iterating and finalizing product designs for AlgoLink’s jobs and connections features, onboarding, and more." link="/algolink" />
+            <Thumbnail name="Skillful" imgsrc={skillful} date="April 2025" description="Designed a skill trading marketplace in a team of 4 designers for the Figma 2025 designathon." link="https://www.figma.com/deck/WAB2nOFTjxApO9CxSsv9QR/FigBuild-2025--Skillful?node-id=1-130&viewport=-17%2C-67%2C0.35&t=CeJ8aAAFRKXAPclv-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" />
           </Box>
         </Box>
         <Button href={"/work"} sx={{

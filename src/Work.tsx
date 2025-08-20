@@ -19,8 +19,8 @@ export default function Work() {
         }}>
             <Thumbnail name="Evently" imgsrc={evently} date="Feb - May 2025" description="Event discovery on campus, personalized." link="/evently" width="460px" />
             <Thumbnail name="Combat Robotics @ Cornell" imgsrc={crc} date="Jun - Aug 2025" description="Modernizing the team’s website while maintaining its personality." link="/crc" width="460px" />
-            <Thumbnail name="AlgoLink" imgsrc={algolink} date="May 2025 - present" description="Recruitment done right. Iterating and finalizing product designs for AlgoLink’s jobs and connections features, onboarding, and more." link="https://www.algolink.net/" width="460px" />
-            <Thumbnail name="Skillful" imgsrc={skillful} date="April 2025" description="Submission to Figma 2025 Designathon (FigBuild), designed a skill trading marketplace in a team of 4 designers." link="https://www.figma.com/deck/WAB2nOFTjxApO9CxSsv9QR/FigBuild-2025--Skillful?node-id=1-130&viewport=-17%2C-67%2C0.35&t=CeJ8aAAFRKXAPclv-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" width="460px" />
+            <Thumbnail name="AlgoLink (Evallos)" imgsrc={algolink} date="May 2025 - present" description="Recruitment done right. Iterating and finalizing product designs for AlgoLink’s jobs and connections features, onboarding, and more." link="/algolink" width="460px" />
+            <Thumbnail name="Skillful" imgsrc={skillful} date="April 2025" description="Designed a skill trading marketplace in a team of 4 designers for the Figma 2025 designathon." link="https://www.figma.com/deck/WAB2nOFTjxApO9CxSsv9QR/FigBuild-2025--Skillful?node-id=1-130&viewport=-17%2C-67%2C0.35&t=CeJ8aAAFRKXAPclv-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" width="460px" />
 
         </Box>
     );
