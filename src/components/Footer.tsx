@@ -15,14 +15,14 @@ export default function Footer(props: FooterProps) {
             width: '84%',
             display: "flex",
             px: "8%",
-            backdropFilter: 'blur(8px) opacity(50%)',
+            backdropFilter: 'blur(8px) opacity(60%)',
             alignItems: 'center',
             justifyContent: 'space-between',
             color: props.color
         }}>
             <Box sx={{ display: 'flex ', flexDirection: "column", width: "50%", gap: '8px' }}>
-                <Typography variant="body2" textOverflow="wrap"> Reach out anytime to talk about my work, experiences, or how to center clay on a throwing wheel. </Typography>
-                <Typography variant="body2" textOverflow="wrap"> Designed & coded with &#9829;</Typography>
+                <Typography variant="body1" textOverflow="wrap"> Reach out anytime to talk about my work, experiences, or how to center clay on a throwing wheel. </Typography>
+                <Typography variant="body1" textOverflow="wrap"> Designed & coded with &#9829;</Typography>
                 <Stack direction="row" gap="20px" py="4px" marginLeft="-16px">
                     <Button startIcon={<EmailIcon />} href={"mailto:angelzhua@gmail.com"} color={props.color} />
                     <Button startIcon={<LinkedInIcon />} href={"https://www.linkedin.com/in/angela-zhu-26b22229a/"} target="_blank" rel="noopener noreferrer" color={props.color} />

@@ -58,8 +58,17 @@ export default function Evently() {
                     gap: '16px',
                     width: { xs: '100%', s: '100%', md: '50%', lg: '50%' },
                 }}>
-                    <Typography variant="body1"> Hello there! I’m Angela, an accent-less Long Islander, programmer, and artist. I am a third-year student at Cornell University majoring in Information Science with minors in Computer Science and Game Design. </Typography>
-                    <Typography variant="body1"> Starting from high school, I knew I had an interest in design, but it first developed into a passion for web development. I planned to pursue a Computer Science degree and become a front-end developer. However, as I became more involved in programming websites, I always felt like I was missing something.</Typography>
+                    <Typography variant="body1">
+                        Hello there! I’m Angela, an accent-less Long Islander,
+                        programmer, and artist. I am a third-year student at Cornell
+                        University majoring in Information Science with minors in
+                        Computer Science and Game Design. </Typography>
+                    <Typography variant="body1">
+                        I love collaboration. As an ex-CS major, I love
+                        picking developers' brains to learn more about
+                        their work and how it intersects with mine.
+                        Design is a highly iterative process, and I thrive in
+                        environments whizzing with ideas and intentional decisions.</Typography>
                     <Typography variant="body1" marginBottom='20px'>   </Typography>
                     <img src={img3} style={{
                         width: '100%',
@@ -80,8 +89,6 @@ export default function Evently() {
                     }} />
                 </Box>
             </Box>
-
-            <Typography variant="body1" my="52px"> Then, I discovered product design, and I realized what I was missing. Designers may not build and deploy the end product, but they truly understand it. When I work on a project, I love to iterate. I want to understand the users, end goals, and problems, and create solutions. And that’s what drew me to change my major, and start anew.</Typography>
 
             {/* lower box */}
             <Box sx={{
@@ -120,8 +127,16 @@ export default function Evently() {
                     gap: '16px'
                 }}>
                     {/* <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or reminiscing on my time in Rome.</Typography> */}
-                    <Typography variant="body1"> From my work, I've realized that product design must intersect with business, especially in today's saturated market. However, at the end of the day, products are made to be used-- by humans. </Typography>
-                    <Typography variant="body1"> My goal as a designer is to be able to balance all aspects of design, from visuals to accessibility, to create intutive and scalable products. I also look to leverage my technical background to build connection between designers, developers, and more.</Typography>
+                    <Typography variant="body1">
+                        From my work, I've realized product design is nothing without
+                        business, especially in today's saturated market. However,
+                        at the end of the day, products are made to be used-- by humans. </Typography>
+                    <Typography variant="body1">
+                        I choose design because it is at the intersection of everything I
+                        think is important about technology. Innovation. Collaboration.
+                        Iteration. Curiosity. I choose to fully and truly understand every
+                        product that I work on, to gain the best possible perspective and create
+                        features that truly empathize with their users.</Typography>
                 </Box>
 
             </Box>
