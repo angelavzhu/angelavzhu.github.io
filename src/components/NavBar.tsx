@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Box, Typography, Button } from '@mui/material';
 import { Link, useLocation } from "react-router-dom"
 
@@ -13,14 +13,19 @@ const links = ["/work", "/about", "/play", "/resume"];
 
 export default function Header(props: HeaderProps) {
     const location = useLocation();
-    const [activePage, setActivePage] = useState(0);
+    const currentPath = location.pathname;
 
-    useEffect(() => {
-        const currPath = location.pathname;
-        const activeIndex = links.findIndex(link => currPath === link || currPath.startsWith(link + '/'));
-        setActivePage(activeIndex);
-    }, [location]);
+    // Calculate active page directly without state
+    const getActivePageIndex = () => {
+        // Exact match first
+        const exactMatch = links.findIndex(link => currentPath === link);
+        if (exactMatch !== -1) return exactMatch;
 
+        // Then check for path starts with (for nested routes)
+        return links.findIndex(link => currentPath.startsWith(link + '/'));
+    };
+
+    const activePage = getActivePageIndex();
     return (
         <Box sx={{
             position: props.position,
@@ -59,14 +64,6 @@ export default function Header(props: HeaderProps) {
                     </Button>
                 ))}
             </Box>
-
-            {/* <Box>
-
-                <Button href={"/work"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>Work </Typography></Button>
-                <Button href={"/about"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>About </Typography></Button>
-                <Button href={"/play"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>Play </Typography></Button>
-                <Button href={"/resume"}> <Typography sx={{ textTransform: 'none', color: 'black' }}>Resume </Typography></Button>
-            </Box> */}
         </Box>
     );
 }
