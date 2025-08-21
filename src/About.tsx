@@ -12,7 +12,7 @@ import img1 from "./assets/about/img1.jpg"
 import img2 from "./assets/about/img2.jpg"
 import img3 from "./assets/about/img3.jpg"
 
-export default function Evently() {
+export default function About() {
     return (
         <Box marginTop="80px" mx="10%" >
             <Box sx={{
@@ -21,12 +21,9 @@ export default function Evently() {
                 width: '100%',
                 zIndex: 500,
                 flexWrap: 'wrap',
-                py: '4px',
-                marginBottom: '-16px'
             }}>
                 <img src={name} width="300px" />
                 <Typography variant="heading1" fontSize="38px">, gacha addict and cat lover </Typography>
-
             </Box>
             <Box sx={{
                 height: '100vh',
@@ -40,7 +37,6 @@ export default function Evently() {
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',
                 backgroundPosition: 'center'
-
             }} />
 
             {/* top section */}
@@ -68,7 +64,7 @@ export default function Evently() {
                         picking developers' brains to learn more about
                         their work and how it intersects with mine.
                         Design is a highly iterative process, and I thrive in
-                        environments whizzing with ideas and intentional decisions.</Typography>
+                        environments whizzing with ideas and opportunities to grow.</Typography>
                     <Typography variant="body1" marginBottom='20px'>   </Typography>
                     <img src={img3} style={{
                         width: '100%',

@@ -1,16 +1,16 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
 
-
-import NavBar from "./components/NavBar"
+import NavBarMobile from "./components/NavBarMobile"
+import NavBarDesktop from "./components/NavBarDesktop"
 import Footer from "./components/Footer"
 import Home from "./Home"
 import Work from "./Work"
 import About from "./About"
 import Play from "./Play"
 import Resume from "./Resume"
-
 import Evently from "./case-studies/Evently"
 import CRC from "./case-studies/CRC"
 import AlgoLink from "./case-studies/AlgoLink"
@@ -52,12 +52,15 @@ const theme = createTheme({
 })
 
 export default function App() {
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <NavBar position="fixed" />
+        {isMobile ? <NavBarMobile /> : <NavBarDesktop position="fixed" />}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isMobile={isMobile} />} />
           <Route path="/work" element={<Work />} />
           <Route path="/evently" element={<Evently />} />
           <Route path="/crc" element={<CRC />} />

@@ -7,14 +7,16 @@ import lilybutton from "./assets/lilybutton.png"
 import lilybuttonSelected from "./assets/lilybuttonselected.png"
 import Thumbnail from "./components/Thumbnail"
 import Footer from "./components/Footer"
-import NavBar from "./components/NavBar"
+import NavBarDesktop from "./components/NavBarDesktop"
+import NavBarMobile from "./components/NavBarMobile"
 
 import evently from './assets/evently/banner.png'
 import crc from './assets/CRSite/thumbnail.png'
 import skillful from './assets/Skillful/Skillful.png'
 import algolink from './assets/AlgoLink/Banner.png'
 
-export default function Home() {
+// Unique case: header and footer are separately added for flex positioning
+export default function Home({ isMobile }) {
   return (
     <Box sx={{
       zIndex: 101,
@@ -36,7 +38,8 @@ export default function Home() {
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center'
       }}>
-        <NavBar position="relative" />
+        {isMobile ? <NavBarMobile /> : <NavBarDesktop position="flex" />}
+
         {/* contents */}
         <Box sx={{
           px: '32px',
