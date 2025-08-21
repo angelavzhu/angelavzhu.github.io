@@ -93,7 +93,7 @@ export default function Evently() {
                 </Stack>
 
                 {/* Background Info*/}
-                <Stack flexDirection="row" gap="40px">
+                <Stack flexDirection="row" gap="40px" flexWrap="wrap">
                     <Box sx={{
                         display: "flex",
                         flexDirection: 'column',
@@ -106,6 +106,7 @@ export default function Evently() {
                     </Box>
                     <img src={NME} style={{
                         width: '50%',
+                        minWidth: '400px',
                         borderRadius: '20px',
                         objectFit: 'cover'
                     }} />
@@ -298,7 +299,7 @@ export default function Evently() {
 
                     <Box>
                         <Typography variant="heading3"> User Personas </Typography>
-                        <Stack width="100%" paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" direction="row" gap="5%">
+                        <Stack width="100%" paddingTop="20px" paddingBottom="40px" display="flex" flexWrap="wrap" alignItems="center" direction="row" gap="50px">
                             <img src={bill} width="200px" />
                             <Box width="70%" display="flex" flexDirection="column">
                                 <Typography paddingBottom="24px" variant="heading3">Bill, Event Attendee (Freshman) </Typography>
@@ -319,7 +320,7 @@ export default function Evently() {
                             </Box>
                         </Stack>
 
-                        <Stack width="100%" display="flex" alignItems="center" direction="row" gap="5%">
+                        <Stack width="100%" display="flex" alignItems="center" direction="row" gap="50px" flexWrap="wrap">
                             <img src={jennie} width="200px" />
 
                             <Box>
@@ -590,7 +591,7 @@ export default function Evently() {
                             }}> Max 500 words</Typography>
 
                             <Typography paddingBottom="10px"> What Could Be Improved </Typography>
-                            <Box padding="20px" borderRadius="10px" sx={{ border: 1 }}>
+                            <Box padding="20px" borderRadius="10px" sx={{ border: 1, backgroundColor: 'white' }}>
                                 <Typography marginBottom="24px"> Due to a shorter project duration, I was <b>unable to fully develop some of the interesting edge cases</b> that came up in our user research. If I were to create Evently again, I would want to put more focus on developing the friends feature.  </Typography>
                                 <Typography marginBottom="24px">
                                     Event attendance can be a social decision, so having a more formalized way to access friends other than seeing their activity in event pages would make Evently a more interesting and engaging app. </Typography>

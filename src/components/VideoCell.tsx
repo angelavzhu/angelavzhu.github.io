@@ -14,7 +14,7 @@ export default function VideoCell(props: VideoData) {
             justifyContent: 'center',
             flexDirection: 'column'
         }}>
-            <video autoPlay muted controls style={{ width: '30%', borderRadius: '50px' }}>
+            <video autoPlay muted controls style={{ width: '30%', minWidth: '300px', borderRadius: '50px' }}>
                 <source src={props.video} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

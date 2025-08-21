@@ -106,7 +106,8 @@ export default function AlgoLink() {
 
                     <Box sx={{
                         width: '100%',
-                        paddingY: '64px',
+                        py: '64px',
+                        px: '20px',
                         display: 'flex',
                         justifyContent: 'center',
                         backgroundColor: '#1C1D21',

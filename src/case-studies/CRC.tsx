@@ -134,7 +134,7 @@ export default function CRC() {
                     </Stack>
 
                     {/* Background Info*/}
-                    <Stack flexDirection="row" gap="40px">
+                    <Stack flexDirection="row" gap="40px" flexWrap="wrap">
                         <Box sx={{
                             display: "flex",
                             flexDirection: 'column',
@@ -146,7 +146,7 @@ export default function CRC() {
                             <Typography> I took on the role of lead designer to spearhead the design of the site, with a goal of creating a new and exciting website that modernized the old design while emphasizing our team’s individuality.</Typography>
                         </Box>
                         <img src={Team} style={{
-                            width: '50%',
+                            width: '400px',
                             borderRadius: '20px',
                             objectFit: 'cover'
                         }} />
@@ -219,10 +219,21 @@ export default function CRC() {
                                 flexWrap: 'wrap',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                gap: '20px'
+                                gap: '20px',
+                                width: '50%'
                             }}>
-                                <img src={form1} width="500px" />
-                                <img src={form2} width="500px" />
+                                <Box sx={{
+                                    width: '35%',
+                                    minWidth: '420px'
+                                }}>
+                                    <img src={form1} width="100%" />
+                                </Box>
+                                <Box sx={{
+                                    width: '35%',
+                                    minWidth: '420px'
+                                }}>
+                                    <img src={form2} width="100%" />
+                                </Box>
                             </Box>
                             <Box sx={{
                                 display: 'flex',
@@ -256,9 +267,10 @@ export default function CRC() {
                         }}>
                             <Stack direction="row" gap="40px" sx={{
                                 justifyContent: 'center',
+                                flexWrap: 'wrap',
                                 alignItems: 'center'
                             }}>
-                                <Stack gap="32px">
+                                <Stack gap="32px" width="40%" minWidth="400px">
                                     <Typography variant="heading3">"The flow of the website didn't feel optimal." </Typography>
                                     <Stack direction="row" gap="2%">
                                         <ClearIcon sx={{ color: 'red' }} />
@@ -271,16 +283,17 @@ export default function CRC() {
                                     </Stack>
                                 </Stack>
                                 <img src={problems} style={{
-                                    width: '50%',
-                                    minWidth: "480px"
+                                    width: '40%',
+                                    minWidth: "420px"
                                 }} />
                             </Stack>
 
                             <Stack direction="row" gap="40px" sx={{
                                 justifyContent: 'center',
+                                flexWrap: 'wrap',
                                 alignItems: 'center'
                             }}>
-                                <Stack gap="32px">
+                                <Stack gap="32px" width="40%" minWidth="400px">
                                     <Typography variant="heading3">"So much text." </Typography>
                                     <Stack direction="row" gap="2%">
                                         <ClearIcon sx={{ color: 'red' }} />
@@ -293,16 +306,17 @@ export default function CRC() {
                                     </Stack>
                                 </Stack>
                                 <img src={problems} style={{
-                                    width: '50%',
-                                    minWidth: "480px"
+                                    width: '40%',
+                                    minWidth: "420px"
                                 }} />
                             </Stack>
 
-                            <Stack direction="row" sx={{
+                            <Stack direction="row" gap="40px" sx={{
                                 justifyContent: 'center',
+                                flexWrap: 'wrap',
                                 alignItems: 'center'
                             }}>
-                                <Stack gap="32px">
+                                <Stack gap="32px" width="40%" minWidth="400px">
                                     <Typography variant="heading3">"I love the small details." </Typography>
                                     <Stack direction="row" gap="2%">
                                         <CheckIcon sx={{ color: 'green' }} />
@@ -316,16 +330,16 @@ export default function CRC() {
                                     </Stack>
                                 </Stack>
                                 <img src={keep} style={{
-                                    width: '50%',
-                                    minWidth: "480px"
+                                    width: '40%',
+                                    minWidth: "420px"
                                 }} />
                             </Stack>
                         </Box>
-                        <Typography variant="body1"> I had used the site many times and experienced many of the same issues, so the feedback that I received lined up with what I was expecting. However, the perspectives of our new members brought to light some issues with the content of our site, namely the fact that our team’s culture was not clearly conveyed, which was a big issue. Therefore, I synthesized the information into the persona of a prospective applicant to the team.</Typography>
+                        <Typography variant="body1"> I had used the site several times and experienced many of the same issues, so the feedback that I received lined up with what I was expecting. However, the perspectives of our new members brought to light some issues with the content of our site, namely the fact that our team’s culture was not clearly conveyed, which was a big concern. Therefore, I synthesized the information into the persona of a prospective applicant to the team.</Typography>
 
                         <Typography variant="heading3"> User Persona</Typography>
 
-                        <Stack width="100%" paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" direction="row" gap="10%">
+                        <Stack width="100%" paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" flexWrap="wrap" direction="row" gap="50px">
                             <img width="200px" src={alana} style={{ borderRadius: '100px' }} />
                             <Box width="70%" display="flex" flexDirection="column">
                                 <Typography paddingBottom="24px" variant="heading3">Alana, Prospective Applicant to CRC (Freshman) </Typography>
@@ -421,36 +435,30 @@ export default function CRC() {
                                 display: "flex",
                                 flexDirection: 'column',
                                 rowGap: "20px",
-                                width: '60%'
+                                width: { xs: '100%', sm: '100%', md: '50%', lg: '50%' }
                             }}>
                                 <Typography variant="heading3"> Colors </Typography>
-                                <Stack direction="row" spacing="80px">
-                                    {/* Left column */}
-                                    <Box>
-                                        <Box marginBottom="20px">
-                                            <Box sx={{ backgroundColor: "#B21D1D", marginBottom: '20px', width: "160px", height: '160px' }} />
-                                            <Typography>#B21D1D</Typography>
-                                        </Box>
-                                        <Box>
-                                            <Box sx={{ backgroundColor: "#FFFFFF", marginBottom: '20px', width: "160px", height: '160px' }} />
-                                            <Typography>#FFFFFF</Typography>
-                                        </Box>
+                                <Stack direction="row" flexWrap="wrap" gap="20px">
+                                    <Box >
+                                        <Box sx={{ backgroundColor: "#B21D1D", marginBottom: '20px', width: "140px", height: '140px' }} />
+                                        <Typography>#B21D1D</Typography>
                                     </Box>
-                                    {/* Middle column */}
                                     <Box>
-                                        <Box marginBottom="20px">
-                                            <Box sx={{ backgroundColor: "#772525", marginBottom: '20px', width: "160px", height: '160px' }} />
-                                            <Typography>#772525</Typography>
-                                        </Box>
-                                        <Box>
-                                            <Box sx={{ backgroundColor: "#ED9191", marginBottom: '20px', width: "160px", height: '160px' }} />
-                                            <Typography>#ED9191</Typography>
-                                        </Box>
+                                        <Box sx={{ backgroundColor: "#FFFFFF", marginBottom: '20px', width: "140px", height: '140px' }} />
+                                        <Typography>#FFFFFF</Typography>
                                     </Box>
-                                    {/* Right */}
+                                    <Box >
+                                        <Box sx={{ backgroundColor: "#772525", marginBottom: '20px', width: "140px", height: '140px' }} />
+                                        <Typography>#772525</Typography>
+                                    </Box>
+                                    <Box>
+                                        <Box sx={{ backgroundColor: "#ED9191", marginBottom: '20px', width: "140px", height: '140px' }} />
+                                        <Typography>#ED9191</Typography>
+
+                                    </Box>
                                     <Box>
                                         <Box marginBottom="20px">
-                                            <Box sx={{ backgroundColor: "#630809", marginBottom: '20px', width: "160px", height: '160px' }} />
+                                            <Box sx={{ backgroundColor: "#630809", marginBottom: '20px', width: "140px", height: '140px' }} />
                                             <Typography>#ED9191</Typography>
                                         </Box>
 
@@ -459,7 +467,10 @@ export default function CRC() {
                             </Box>
 
                             {/* RHS */}
-                            <Stack gap="64px" width="30%">
+                            <Stack gap="64px" sx={{
+                                width: { xs: '100%', sm: '100%', md: '40%', lg: '40%' }
+
+                            }}>
                                 {/* Typography*/}
                                 <Box sx={{
                                     display: "flex",
@@ -560,15 +571,15 @@ export default function CRC() {
                     }}>
                         <Typography variant="heading2"> Final Solutions </Typography>
                         <Typography variant="heading3" fontStyle="italic"> Improvements that stuck, and new ideas that worked. </Typography>
-                        <Stack gap="20%" direction="row" alignItems='center'>
-                            <Box width="40%">
+                        <Stack gap="40px" flexWrap="wrap" direction="row" alignItems='center'>
+                            <Box width="500px" >
                                 <Typography variant="heading3"> Introduce The Team </Typography>
                                 <Typography variant="body1" paddingTop="40px"> I added concise summaries of our team to the home page to better represent our team to prospective applicants. Since we still wanted applicants to attend information sessions, this section was meant to be an introduction to the team to pique interest. </Typography>
                             </Box>
-                            <img src={about} width="40%" />
+                            <img src={about} width="400px" />
                         </Stack>
 
-                        <Stack direction="row" gap="10%" alignItems='center' flexWrap="wrap">
+                        <Stack direction="row" gap="40px" alignItems='center' justifyContent="center" flexWrap="wrap">
                             <img src={mobile1} width="25%" style={{ minWidth: '200px' }} />
                             <Box width="25%" style={{ minWidth: '200px' }}>
                                 <Typography variant="heading3" > Mobile Compatibility </Typography>
