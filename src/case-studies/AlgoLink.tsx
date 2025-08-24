@@ -36,7 +36,6 @@ const theme = createTheme({
     },
 })
 
-// https://www.algolink.net/
 
 export default function AlgoLink() {
     return (
@@ -64,7 +63,7 @@ export default function AlgoLink() {
                     <Box width="80vw">
                         <img src={Banner} width="100%" />
                         <Box display=' flex' justifyContent="center" marginBottom="24px">
-                            <Button href={"https://www.algolink.net/"} target="_blank" rel="noopener noreferrer" sx={{
+                            <Button href={"https://evallos.com/"} target="_blank" rel="noopener noreferrer" sx={{
                                 backgroundColor: '#003DF5',
                                 borderRadius: '10px',
                                 borderWidth: '1px',
