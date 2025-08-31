@@ -85,24 +85,21 @@ export default function CRC() {
                     flexDirection: 'column',
                     gap: "40px",
                 }}>
-                    <Box width="80vw">
-                        <img src={Banner} width="100%" />
-                        <Box display=' flex' justifyContent="center" marginBottom="24px">
-                            <Button href={"https://combatrobotics.engineering.cornell.edu/"} target="_blank" rel="noopener noreferrer" sx={{
-                                backgroundColor: '#4A1C1C',
-                                borderRadius: '10px',
-                                borderStyle: 'solid',
-                                borderWidth: '1px',
-                                width: '70%',
-                                borderColor: '#B21C1C'
-                            }}>
-                                <Typography variant="body1" textTransform="none">
-                                    Visit Site
-                                </Typography>
-                            </Button>
-                        </Box>
+                    <img src={Banner} width="100%" />
+                    <Box display=' flex' justifyContent="center" marginBottom="24px">
+                        <Button href={"https://combatrobotics.engineering.cornell.edu/"} target="_blank" rel="noopener noreferrer" sx={{
+                            backgroundColor: '#4A1C1C',
+                            borderRadius: '10px',
+                            borderStyle: 'solid',
+                            borderWidth: '1px',
+                            width: '70%',
+                            borderColor: '#B21C1C'
+                        }}>
+                            <Typography variant="body1" textTransform="none">
+                                Visit Site
+                            </Typography>
+                        </Button>
                     </Box>
-
 
                     <Typography variant="heading1"> Combat Robotics @ Cornell </Typography>
                     <Typography variant="body1"> Initiated a complete redesign of the Combat Robotics @ Cornell project team’s mobile and desktop site to modernize the design system for a more engaging and improved user experience. </Typography>
@@ -138,15 +135,16 @@ export default function CRC() {
                         <Box sx={{
                             display: "flex",
                             flexDirection: 'column',
-                            rowGap: "30px"
+                            rowGap: "30px",
+                            width: '45%'
                         }}
                         >
                             <Typography variant="heading2"> How It Started </Typography>
-                            <Typography> As a member of the <Link to={"https://combatrobotics.engineering.cornell.edu/"} target="_blank" rel="noopener noreferrer">Combat Robotics @ Cornell (CRC)</Link> project team, we participate in an annual combat robotics competition, NHRL. This year, the marketing sub-team and I took on the challenge of redesigning our team website to create an immersive web experience to help promote our team to members at the event and for future use in recruitment.</Typography>
-                            <Typography> I took on the role of lead designer to spearhead the design of the site, with a goal of creating a new and exciting website that modernized the old design while emphasizing our team’s individuality.</Typography>
+                            <Typography> As a member of the <Link to={"https://combatrobotics.engineering.cornell.edu/"} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Combat Robotics @ Cornell (CRC)</Link> project team, we participate in an annual combat robotics competition, NHRL. This year, the marketing sub-team and I took on the challenge of redesigning our team website to create an immersive web experience in order to promote our team at the event, and for future use in recruitment.</Typography>
+                            <Typography> I took on the role of lead designer to spearhead the re-design of the site, with a goal of creating a new and exciting website that modernized the old design while emphasizing our team’s individuality.</Typography>
                         </Box>
                         <img src={Team} style={{
-                            width: '400px',
+                            width: '500px',
                             borderRadius: '20px',
                             objectFit: 'cover'
                         }} />
@@ -166,7 +164,7 @@ export default function CRC() {
                             <Typography variant="heading2"> Problem Space </Typography>
                             <Typography variant="heading3" fontStyle="italic"> Creating a better representation of our team. </Typography>
                         </Box>
-                        <Typography> Our team had been considering a website redesign for some time, as our current website was designed and programmed by one person over 2 years ago. Many members of the team have agreed that the design did not align with our team’s image, and wanted improvements to the site’s navigation, colors, and theme. However, there were also many aspects of the site that we loved and wanted to maintain. This led us to our question: </Typography>
+                        <Typography> Our team had been considering a website redesign for some time, as our current website was designed and programmed by an alumnus over 2 years ago. Many members of the team have agreed that the design did not align with our team’s image, and wanted improvements to the site’s navigation, colors, and theme. However, there were also many aspects of the site that we loved and wanted to maintain. This led us to our question: </Typography>
                         <Box width="100%" display="flex" alignItems="center" justifyContent="center">
                             <Box sx={{
                                 border: '1px solid grey',
@@ -212,7 +210,7 @@ export default function CRC() {
                             <Typography variant="heading2"> User Research </Typography>
                             <Typography variant="heading3" fontStyle="italic"> Why do we need to redesign the website? </Typography>
                         </Box>
-                        <Typography> I decided that it was important to get an full perspective on our site from old and new members, to ensure that a website redesign was necessary and would improve our team’s image. Our team had recently finished recruitment, so I created a user survey that was sent to 40+ members of our team, which sought to address the following key concerns: </Typography>
+                        <Typography> I decided that it was important to get an full perspective on our site from old and new members, to ensure that a website redesign was necessary and would improve our team’s image. Our team had recently finished recruitment, so I created a user survey that was sent to 40+ members of the team, which sought to address the following key concerns: </Typography>
 
                         <Box display="flex" flexDirection="row" flexWrap="wrap">
                             <Box sx={{
@@ -325,8 +323,7 @@ export default function CRC() {
                                     </Stack>
                                     <Stack direction="row" gap="2%">
                                         <CheckIcon sx={{ color: 'green' }} />
-                                        <Typography variant="body1">Features like the pixel art robots were interesting and showed personality
-                                            from reading through</Typography>
+                                        <Typography variant="body1">Features like the pixel art robots were interesting and showed personality</Typography>
                                     </Stack>
                                 </Stack>
                                 <img src={keep} style={{
@@ -335,7 +332,7 @@ export default function CRC() {
                                 }} />
                             </Stack>
                         </Box>
-                        <Typography variant="body1"> I had used the site several times and experienced many of the same issues, so the feedback that I received lined up with what I was expecting. However, the perspectives of our new members brought to light some issues with the content of our site, namely the fact that our team’s culture was not clearly conveyed, which was a big concern. Therefore, I synthesized the information into the persona of a prospective applicant to the team.</Typography>
+                        <Typography variant="body1"> I had browsed the site several times and experienced many of the same issues, so the feedback that I received lined up with what I was expecting. However, the perspectives of our new members brought to light some issues with the content of our site, namely the fact that our team’s culture was not clearly conveyed, which was a big concern. Therefore, I synthesized the information into the persona of a prospective applicant to the team.</Typography>
 
                         <Typography variant="heading3"> User Persona</Typography>
 
@@ -478,8 +475,7 @@ export default function CRC() {
                                     gap: "20px",
                                 }}>
                                     <Typography variant="heading3"> Typography </Typography>
-                                    <Typography fontFamily="Work Sans"> Work Sans (header) </Typography>
-                                    <Typography fontFamily="Hind"> Hind (body) </Typography>
+                                    <Typography fontFamily="Josefin Sans"> Josefin Sans </Typography>
                                 </Box>
                                 {/* Text */}
                                 <Box sx={{
@@ -519,7 +515,7 @@ export default function CRC() {
                     }}>
                         <Typography variant="heading2"> Iterations and Feedback</Typography>
                         <Typography variant="heading3" fontStyle="italic"> A critical step for improved usability. </Typography>
-                        <Typography variant="body1"> Due to time constraints, we had already created high-fidelity prototypes of our site for developers to begin programming. However, I quickly realized some aspects of our design were confusing for first-time users and needed improvement. This led us to a round of user testing using a combination of Figma prototypes and finished implementations. </Typography>
+                        <Typography variant="body1"> Due to time constraints, we had already created high-fidelity designs of our site for developers to begin programming. However, I quickly realized some aspects of our design were confusing for first-time users and needed improvement. This led us to a round of user testing using a combination of Figma prototypes and finished implementations. </Typography>
                         <Box display="flex" justifyContent="center" alignItems="center" width="100%" sx={{
                             background: 'linear-gradient(to right,  #1C1C1C, #B21D1D)',
                             py: '32px',
@@ -547,7 +543,7 @@ export default function CRC() {
                             </video>
                         </Box>
 
-                        <Typography variant='body1'> But, since the information popups appeared directly on top of the row of buttons, users found it difficult to swap between sections. Therefore, we decided to move the popup to appear above the buttons, which would only cover text that the user has already read. </Typography>
+                        <Typography variant='body1'> But, since the information popups appeared directly on top of the row of buttons (see video), users found it difficult to swap between sections. Therefore, we decided to move the popup to appear above the buttons, which would only cover text that the user has already read. </Typography>
                         <Typography variant='heading3'>  Connecting Content </Typography>
                         <Typography variant='body1'>  Our users’ fresh perspective also brought ideas that greatly improved our information architecture, such as connecting within a page for a linear flow. In this manner, the subteam and new member project pages were individually connected to their relevant pages.</Typography>
                         <Box sx={{

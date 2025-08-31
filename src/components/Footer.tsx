@@ -22,8 +22,8 @@ export default function Footer(props: FooterProps) {
         }}>
             <Box sx={{ display: 'flex ', flexDirection: "column", width: "50%", gap: '8px' }}>
                 <Typography variant="body2" textOverflow="wrap"> Reach out anytime to talk about my work, experiences, or how to center clay on a throwing wheel. </Typography>
-                <Stack direction="row" gap="20px" py="4px">
-                    <Typography variant="body2" textOverflow="wrap"> Designed & coded with &#9829;</Typography>
+                <Stack direction="row" py="4px" display="flex" alignItems="center">
+                    <Typography variant="body2" textOverflow="wrap" paddingRight="24px"> Designed & coded with &#9829;</Typography>
                     <Button startIcon={<EmailIcon />} href={"mailto:angelzhua@gmail.com"} color={props.color} />
                     <Button startIcon={<LinkedInIcon />} href={"https://www.linkedin.com/in/angela-zhu-26b22229a/"} target="_blank" rel="noopener noreferrer" color={props.color} />
                 </Stack>

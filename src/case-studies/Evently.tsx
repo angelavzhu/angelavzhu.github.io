@@ -55,7 +55,6 @@ const theme = createTheme({
 export default function Evently() {
     return (
         <ThemeProvider theme={theme}>
-
             <Box my="80px" mx="10%" sx={{
                 display: "flex",
                 flexDirection: 'column',
@@ -97,7 +96,8 @@ export default function Evently() {
                     <Box sx={{
                         display: "flex",
                         flexDirection: 'column',
-                        rowGap: "30px"
+                        rowGap: "30px",
+                        width: { xs: '100%', sm: '100%', md: '45%', lg: '45%' }
                     }}
                     >
                         <Typography variant="heading2"> How It Started </Typography>
@@ -148,7 +148,10 @@ export default function Evently() {
                     }}>
                         <Typography variant="heading2"> Market Research </Typography>
                         <Typography variant="heading3" fontStyle="italic" marginBottom="20px"> What products currently exist to solve this problem? </Typography>
+                        <Typography> To better understand the gap in the market, my partner and I analyzed 3 potential competitors to our proposed idea. CampusGroups, Cornell's official event registration platform, Instagram, a popular pick for event promotion, and EventBrite, a non-academic event platform. </Typography>
                     </Box>
+
+
                     <Box marginBottom="20px" display="flex" flexDirection="row" gap="160px" alignItems="center" justifyContent="center" >
                         <Box width="10%" display="flex" flexDirection="column" gap="40px" alignItems="center" justifyContent="center">
                             <img src={CG} />
@@ -168,10 +171,10 @@ export default function Evently() {
                             <Typography> Instagram</Typography>
                         </Box>
                         <Box width="50%">
-                            <Typography> ✔ Cornell’s official event hub, known and used by all students </Typography>
-                            <Typography> ✔ Event banners lead to eye catching and interesting promotion </Typography>
-                            <Typography> ❌ Lack of personalization makes it difficult to find relevant events </Typography>
-                            <Typography> ❌ UI is confusing and difficult to navigate </Typography>
+                            <Typography> ✔ Consistent friend updates (eg. Stories, Posts) </Typography>
+                            <Typography> ✔ Keep up-to-date with followed organizations </Typography>
+                            <Typography> ❌ Not an event-focused platform </Typography>
+                            <Typography> ❌ Only showing followed content creates filter bubbles and stagnant feeds </Typography>
                         </Box>
                     </Box>
 
@@ -181,10 +184,9 @@ export default function Evently() {
                             <Typography> EventBrite</Typography>
                         </Box>
                         <Box width="50%">
-                            <Typography> ✔ Cornell’s official event hub, known and used by all students </Typography>
-                            <Typography> ✔ Event banners lead to eye catching and interesting promotion </Typography>
-                            <Typography> ❌ Lack of personalization makes it difficult to find relevant events </Typography>
-                            <Typography> ❌ UI is confusing and difficult to navigate </Typography>
+                            <Typography> ✔ Functionality is centered around events in and out of campus settings </Typography>
+                            <Typography> ✔ Promotes events of all sizes </Typography>
+                            <Typography> ❌ Lacks connection with friends </Typography>
                         </Box>
                     </Box>
                 </Box>
@@ -275,13 +277,13 @@ export default function Evently() {
                         </Stack>
                     </Box>
                     <Typography>We combined our findings into an affinity map, and we realized:</Typography>
-                    <Stack direction="row">
+                    <Stack direction="row" gap="48px">
                         {/* Opens link in new tab */}
-                        <Box width="50%">
+                        <Box width="45%">
                             <Typography paddingBottom="5%" > <b>1. </b>Interviewees were evenly split on whether they attended events due to personal interest or as a social event</Typography>
                             <Typography><b>2. </b>There was, as predicted, a large gap in the market for personalized event discovery</Typography>
                         </Box>
-                        <Box width="50%">
+                        <Box width="45%">
                             <Typography paddingBottom="5%" ><b>3. </b>Students wanted to know friends’ activities and what they are attending</Typography>
                             <Typography><b>4. </b>Unexpectedly good events (outside of comfort zone) are important</Typography>
                         </Box>
@@ -362,7 +364,7 @@ export default function Evently() {
                     <Typography>
                         <ol>
                             <li><Typography>Integrate personalization into event discovery through a feed, with recommendations and areas to explore </Typography></li>
-                            <li><Typography>Build communities through events by following the activity of compatible clubs and friends, but without becoming a social media platform </Typography></li>
+                            <li><Typography>Build communities by following the activity of compatible clubs and friends, but without becoming a social media platform </Typography></li>
                             <li><Typography>Ensure the product is intuitive and easy to use, and integrate preexisting, reliable applications to maximize user experience and trust </Typography></li>
                         </ol>
                     </Typography>
