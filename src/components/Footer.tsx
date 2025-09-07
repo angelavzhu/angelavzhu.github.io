@@ -4,7 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Image from "../assets/footer.png"
 
 interface FooterProps {
-    color: string; //white or black (light or dark mode)
+    color: string; //white or black (text)
 }
 
 export default function Footer(props: FooterProps) {
@@ -15,7 +15,7 @@ export default function Footer(props: FooterProps) {
             width: '84%',
             display: "flex",
             px: "8%",
-            backdropFilter: 'blur(8px) opacity(90%)',
+            backdropFilter: 'blur(10px)',
             alignItems: 'center',
             justifyContent: 'space-between',
             color: props.color

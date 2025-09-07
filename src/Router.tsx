@@ -21,8 +21,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const theme = createTheme({
   typography: {
     accent: {
-      fontFamily: "Marcellus",
-      fontSize: "2rem",
+      fontFamily: "Over The Rainbow",
+      fontSize: "2.6rem",
       fontWeight: "normal"
     },
     heading1: {
