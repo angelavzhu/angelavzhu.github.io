@@ -8,9 +8,9 @@ import BOTW from "./assets/about/BOTW.jpg"
 import Morimens from "./assets/about/Morimens.jpg"
 import Persona from "./assets/about/Persona5.jpg"
 import headshot from "./assets/about/headshot.JPG"
-import img1 from "./assets/about/img1.jpg"
-import img2 from "./assets/about/img2.jpg"
-import img3 from "./assets/about/img3.jpg"
+import montreal from "./assets/about/img1.jpg"
+import nezha from "./assets/about/img2.jpg"
+import korean from "./assets/about/img3.jpg"
 
 export default function About() {
     return (
@@ -66,11 +66,12 @@ export default function About() {
                         Design is a highly iterative process, and I thrive in
                         environments whizzing with ideas and opportunities to grow.</Typography>
                     <Typography variant="body1" marginBottom='20px'>   </Typography>
-                    <img src={img3} style={{
+                    <img src={korean} style={{
                         width: '100%',
                         objectFit: 'cover'
 
                     }} />
+                    <Typography variant="body2" color="#5B5B5B"> Super excited to try kimchi jigae!</Typography>
                 </Box>
                 <Box sx={{
                     display: 'flex',
@@ -85,7 +86,10 @@ export default function About() {
                     }} />
                 </Box>
             </Box>
-
+            <Typography variant="body1">
+                From my work, I've realized product design is nothing without
+                business, especially in today's saturated market. However,
+                at the end of the day, products are made to be used-- by humans. </Typography>
             {/* lower box */}
             <Box sx={{
                 width: '100%',
@@ -97,21 +101,27 @@ export default function About() {
             }}>
                 <Box sx={{
                     width: { xs: '100%', sm: '100%', md: '28%', lg: '28%' },
+                    gap: '16px',
+                    display: 'flex',
+                    flexDirection: 'column'
                 }}>
-                    <img src={img1} style={{
+                    <img src={montreal} style={{
                         width: '100%',
                         objectFit: 'cover'
                     }} />
+                    <Typography variant="body2" color="#5B5B5B"> A church in Montreal</Typography>
                 </Box>
                 <Box sx={{
                     width: { xs: '100%', sm: '100%', md: '28%', lg: '28%' },
-
+                    gap: '16px',
+                    display: 'flex',
+                    flexDirection: 'column'
                 }}>
-                    <img src={img2} style={{
+                    <img src={nezha} style={{
                         width: '100%',
                         objectFit: 'cover'
-
                     }} />
+                    <Typography variant="body2" color="#5B5B5B"> My cat Nezha, the love of my life</Typography>
                 </Box>
 
                 <Box sx={{
@@ -123,10 +133,7 @@ export default function About() {
                     gap: '16px'
                 }}>
                     {/* <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or reminiscing on my time in Rome.</Typography> */}
-                    <Typography variant="body1">
-                        From my work, I've realized product design is nothing without
-                        business, especially in today's saturated market. However,
-                        at the end of the day, products are made to be used-- by humans. </Typography>
+
                     <Typography variant="body1">
                         I choose design because it is at the intersection of everything I
                         think is important about technology. Innovation. Collaboration.

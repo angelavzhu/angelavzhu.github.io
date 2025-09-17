@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, Stack, Slide, Button, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Slide, Button, useTheme } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -14,6 +14,7 @@ function NavBarContents({ open, onClose }) {
             sx={{
                 position: 'fixed',
                 width: 'auto',
+                top: "0px", left: '0px', bottom: '0px',
                 height: '100vh',
                 overflowX: 'hidden',
             }}>
@@ -31,10 +32,10 @@ function NavBarContents({ open, onClose }) {
 
             {/* the links to all the pages. 'text' must exactly match the name of the link.  */}
             <Box flexDirection='column' display="flex" alignItems='center' justifyContent="center" width="100vw" gap="40px" paddingTop="10%" >
-                <NavBarButton href="/work" name="Work" />
+                <NavBarButton href="/" name="Work" />
                 <NavBarButton href="/about" name="About" />
                 <NavBarButton href="/play" name="Play" />
-                <NavBarButton href="/resume" name="Resume" />
+                <NavBarButton href="https://drive.google.com/file/d/1mwTy7CJU0mkgGk4Wxc7viRZWfRg0xl6z/view?usp=sharing" name="Resume" />
             </Box>
         </Box>
     );

@@ -7,8 +7,8 @@ export interface HeaderProps {
     position: string;
 }
 
-const pages = ["Work", "About", "Play", "Resume"];
-const links = ["/work", "/about", "/play", "/resume"];
+const pages = ["Work", "About", "Play"];
+const links = ["/", "/about", "/play"];
 
 export default function Header(props: HeaderProps) {
     const location = useLocation();
@@ -42,8 +42,7 @@ export default function Header(props: HeaderProps) {
 
             <Box sx={{
                 display: 'flex',
-                flexDirection: 'row',
-                gap: '4%'
+                justifyContent: 'space-between'
             }}>
                 {pages.map((word, index) => (
                     <Button
@@ -51,17 +50,35 @@ export default function Header(props: HeaderProps) {
                         href={links[index]}
                         sx={{
                             display: 'flex',
-                            flexDirection: 'row'
+                            flexDirection: 'row',
+                            color: 'black',
+                            '&:hover': {
+                                color: '#007700',
+                                backgroundColor: 'rgba(0,0,0,0)'
+                            },
                         }}>
                         <Typography sx={{ display: activePage === index ? 'flex' : 'none' }}> &#x1FAB7;</Typography>
                         <Typography sx={{
                             textTransform: 'none',
-                            color: 'black',
                         }}>
                             {word}
                         </Typography>
                     </Button>
                 ))}
+                <Button href="https://drive.google.com/file/d/1mwTy7CJU0mkgGk4Wxc7viRZWfRg0xl6z/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        color: 'black',
+                        '&:hover': {
+                            color: '#007700',
+                            backgroundColor: 'rgba(0,0,0,0)'
+                        },
+                    }}>
+                    <Typography sx={{ textTransform: 'none' }}>
+                        Resume
+                    </Typography>
+                </Button>
             </Box>
         </Box>
     );
