@@ -20,7 +20,8 @@ export default function Thumbnail(props: ThumbnailProps) {
         <Button href={props.link} sx={{
             width: props.width ? props.width : '100%',
             '&:hover': {
-                rotate: props.rotate,
+                scale: '1.01',
+                // rotate: props.rotate,
                 backgroundColor: 'white'
             },
         }}>
@@ -36,7 +37,8 @@ export default function Thumbnail(props: ThumbnailProps) {
                 <Box sx={{ display: props.imgsrc ? 'none' : 'flex' }} width="100%" minHeight="240px" marginBottom="4px" />
                 <img src={props.imgsrc} style={{
                     width: "100%",
-                    minHeight: '250px',
+                    minHeight: '200px',
+                    minWidth: '400px',
                     objectFit: 'cover',
                     display: props.imgsrc ? 'flex' : 'none'
                 }} />
@@ -44,7 +46,7 @@ export default function Thumbnail(props: ThumbnailProps) {
                     <Typography variant="body1" sx={{ textTransform: 'none', color: props.color }}>{props.mainTag} &nbsp;</Typography>
                     <Typography variant="body1" sx={{ textTransform: 'none', color: '#5B5B5B' }}>{props.tags}</Typography>
                 </Box>
-                <Box display="flex" gap="1%">
+                <Box display="flex" alignItems="center" gap="1%">
                     <Typography variant="heading3" fontWeight="600" sx={{ color: 'black' }}> {props.name} </Typography>
                     <ArrowOutwardIcon sx={{ color: 'black', display: props.external ? 'flex' : 'none' }} />
                 </Box>

@@ -14,17 +14,8 @@ import korean from "./assets/about/img3.jpg"
 
 export default function About() {
     return (
-        <Box marginTop="80px" mx="10%" >
-            <Box sx={{
-                alignItems: 'center',
-                display: 'flex',
-                width: '100%',
-                zIndex: 500,
-                flexWrap: 'wrap',
-            }}>
-                <img src={name} width="300px" />
-                <Typography variant="heading1" fontSize="38px">, gacha addict and cat lover </Typography>
-            </Box>
+        <Box marginTop="80px" mx="15%" >
+            {/* foreground */}
             <Box sx={{
                 height: '100vh',
                 width: '100vw',
@@ -43,57 +34,82 @@ export default function About() {
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
                 my: '52px',
-                gap: '4vw',
                 width: '100%',
                 flexWrap: 'wrap'
             }}>
+                {/* Text */}
                 <Box sx={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: '16px',
+                    justifyContent: 'center',
+                    gap: '24px',
                     width: { xs: '100%', s: '100%', md: '50%', lg: '50%' },
                 }}>
+                    <Typography variant="heading3" sx={{
+                        color: "#007700"
+                    }}>
+                        ABOUT ME
+                    </Typography>
                     <Typography variant="body1">
-                        Hello there! I’m Angela, an accent-less Long Islander,
-                        programmer, and artist. I am a third-year student at Cornell
-                        University majoring in Information Science with minors in
-                        Computer Science and Game Design. </Typography>
+                        Hello there! I’m Angela, a product designer, programmer, and an accent-less Long Islander.</Typography>
+                    <Typography variant="body1">
+                        I am currently a third-year student at <b>Cornell
+                            University</b> majoring in <b>Information Science</b> with minors in
+                        <b> Computer Science</b> and Game Design.
+                    </Typography>
                     <Typography variant="body1">
                         I love collaboration. As an ex-CS major, I love
                         picking developers' brains to learn more about
                         their work and how it intersects with mine.
                         Design is a highly iterative process, and I thrive in
-                        environments whizzing with ideas and opportunities to grow.</Typography>
-                    <Typography variant="body1" marginBottom='20px'>   </Typography>
-                    <img src={korean} style={{
-                        width: '100%',
-                        objectFit: 'cover'
-
-                    }} />
-                    <Typography variant="body2" color="#5B5B5B"> Super excited to try kimchi jigae!</Typography>
+                        environments <b>whizzing with ideas</b> and opportunities to <b>grow</b>.</Typography>
+                    <img src={name} width="300px" style={{ paddingTop: '24px' }} />
                 </Box>
+                {/* Image */}
                 <Box sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: { xs: '100%', sm: '100%', md: '40%', lg: '40%' },
+                    width: { xs: '100%', s: '100%', md: '40%', lg: '40%' },
+
                 }}>
-                    <img src={headshot} style={{
-                        borderRadius: '100px',
-                        minWidth: '300px',
-                        objectFit: 'cover'
-                    }} />
+                    <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                        <img src={headshot} style={{
+                            // borderRadius: '100px',
+                            minWidth: '300px',
+                            objectFit: 'cover'
+                        }} />
+                    </Box>
                 </Box>
+
             </Box>
-            <Typography variant="body1">
+
+            <Typography variant="heading3" sx={{
+                color: "#007700"
+            }}>
+                DESIGN VALUES
+            </Typography>
+            <Typography variant="body1" paddingTop="20px">
                 From my work, I've realized product design is nothing without
                 business, especially in today's saturated market. However,
-                at the end of the day, products are made to be used-- by humans. </Typography>
+                at the end of the day, products are made to be used... by humans! </Typography>
+
+            <Typography variant="body1" paddingTop="20px">
+                I choose design because it is at the intersection of everything I
+                think is important about technology. Innovation. Collaboration.
+                Iteration. Curiosity. I choose to fully and truly understand every
+                product that I work on, to gain the best possible perspective and create
+                features that truly empathize with their users.</Typography>
+
             {/* lower box */}
             <Box sx={{
                 width: '100%',
                 display: 'flex',
+                justifyContent: 'center',
                 flexDirection: 'row',
                 flexWrap: 'wrap',
                 gap: '4vw',
@@ -125,22 +141,19 @@ export default function About() {
                 </Box>
 
                 <Box sx={{
+                    width: { xs: '100%', sm: '100%', md: '28%', lg: '28%' },
+                    gap: '16px',
                     display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: { xs: '100%', sm: '100%', md: '30%', lg: '30%' },
-                    flexDirection: 'column',
-                    gap: '16px'
+                    flexDirection: 'column'
                 }}>
-                    {/* <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or reminiscing on my time in Rome.</Typography> */}
-
-                    <Typography variant="body1">
-                        I choose design because it is at the intersection of everything I
-                        think is important about technology. Innovation. Collaboration.
-                        Iteration. Curiosity. I choose to fully and truly understand every
-                        product that I work on, to gain the best possible perspective and create
-                        features that truly empathize with their users.</Typography>
+                    <img src={korean} style={{
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} />
+                    <Typography variant="body2" color="#5B5B5B"> Super excited to try kimchi jigae!</Typography>
                 </Box>
+
+                {/* <Typography variant="body1"> When I am not designing (even though it is my passion &lt;&#47;3), you can often find me doodling on my iPad, playing with my cat, or reminiscing on my time in Rome.</Typography> */}
 
             </Box>
 
@@ -156,25 +169,25 @@ export default function About() {
             }}>
                 <img src={Umamusume}
                     style={{
-                        width: '240px',
+                        width: '210px',
                         height: '300px',
                         objectFit: 'cover'
                     }} />
                 <img src={Persona}
                     style={{
-                        width: '240px',
+                        width: '210px',
                         height: '300px',
                         objectFit: 'cover'
                     }} />
                 <img src={BOTW}
                     style={{
-                        width: '240px',
+                        width: '210px',
                         height: '300px',
                         objectFit: 'cover'
                     }} />
                 <img src={Morimens}
                     style={{
-                        width: '240px',
+                        width: '210px',
                         height: '300px',
                         objectFit: 'cover'
                     }} />
