@@ -336,9 +336,9 @@ export default function CRC() {
 
                         <Typography variant="heading3"> User Persona</Typography>
 
-                        <Stack width="100%" paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" flexWrap="wrap" direction="row" gap="50px">
-                            <img width="200px" src={alana} style={{ borderRadius: '100px' }} />
-                            <Box width="70%" display="flex" flexDirection="column">
+                        <Stack paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap" direction="row" gap="50px">
+                            <img width="200px" src={alana} />
+                            <Box display="flex" flexDirection="column">
                                 <Typography paddingBottom="24px" variant="heading3">Alana, Prospective Applicant to CRC (Freshman) </Typography>
                                 <Typography>Goals:</Typography>
                                 <Box marginLeft="20px" display="flex" flexDirection="column">

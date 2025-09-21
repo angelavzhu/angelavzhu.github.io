@@ -33,7 +33,7 @@ export default function Header(props: HeaderProps) {
             right: "0px",
             px: '50px',
             alignItems: 'center',
-            zIndex: 51,
+            zIndex: 100,
             background: 'linear-gradient(to right,  transparent, white)',
             display: "flex",
             justifyContent: 'space-between',

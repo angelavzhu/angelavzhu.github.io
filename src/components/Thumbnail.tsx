@@ -38,7 +38,7 @@ export default function Thumbnail(props: ThumbnailProps) {
                 <img src={props.imgsrc} style={{
                     width: "100%",
                     minHeight: '200px',
-                    minWidth: '400px',
+                    minWidth: '300px',
                     objectFit: 'cover',
                     display: props.imgsrc ? 'flex' : 'none'
                 }} />

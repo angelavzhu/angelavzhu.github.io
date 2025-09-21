@@ -19,7 +19,7 @@ export default function About() {
             <Box sx={{
                 height: '100vh',
                 width: '100vw',
-                zIndex: 0,
+                zIndex: -10,
                 display: 'flex',
                 position: 'fixed',
                 top: '0', left: '0',

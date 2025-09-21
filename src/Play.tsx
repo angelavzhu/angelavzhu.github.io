@@ -40,17 +40,13 @@ export default function Play() {
                 backgroundPosition: 'center',
             }} />
             <Stack direction="row" gap="50px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap">
-                <Box width="40%" gap='50px' display="flex" alignItems="center" flexDirection="column">
-                    <img src={Portrait} width="100%" height="100%" style={{
-                        minWidth: '300px'
-                    }} />
+                <Box width="40%" minWidth="200px" gap='50px' display="flex" alignItems="center" flexDirection="column">
+                    <img src={Portrait} width="100%" height="100%" />
                     <Typography variant="body2" color="#5B5B5B"> Portrait, 2024 </Typography>
                 </Box>
 
-                <Box width="40%" gap="50px" display="flex" alignItems="center" flexDirection="column">
-                    <img src={Powerpuff} width="100%" height="100%" style={{
-                        minWidth: '300px'
-                    }} />
+                <Box width="40%" minWidth="200px" gap="50px" display="flex" alignItems="center" flexDirection="column">
+                    <img src={Powerpuff} width="100%" height="100%" />
                     <Typography variant="body2" color="#5B5B5B"> Illustration, 2024 </Typography>
                 </Box>
 
@@ -70,16 +66,12 @@ export default function Play() {
 
 
             <Stack direction="row" gap="50px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap">
-                <Box width="40%" gap="50px" display="flex" alignItems="center" flexDirection="column">
-                    <img src={Lilypads} width="100%" height="100%" style={{
-                        minWidth: '300px'
-                    }} />
+                <Box width="40%" minWidth="200px" gap="50px" display="flex" alignItems="center" flexDirection="column">
+                    <img src={Lilypads} width="100%" height="100%" />
                     <Typography variant="body2" color="#5B5B5B"> Lilypads, 2025 </Typography>
                 </Box>
-                <Box width="40%" gap="50px" display="flex" alignItems="center" flexDirection="column">
-                    <img src={Grandma} width="100%" height="100%" style={{
-                        minWidth: '300px'
-                    }} />
+                <Box width="40%" minWidth="200px" gap="50px" display="flex" alignItems="center" flexDirection="column">
+                    <img src={Grandma} width="100%" height="100%" />
                     <Typography variant="body2" color="#5B5B5B"> Character design, 2024 </Typography>
                 </Box>
 
