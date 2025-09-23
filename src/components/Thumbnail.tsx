@@ -12,6 +12,7 @@ export interface ThumbnailProps {
     imgsrc?: string; // whether an image should be used instead of a color for the banner
     width?: string;
     rotate: string; // rotation angle for hover
+    dark?: boolean; // whether the thumbnail has a dark background
     external?: string; // whether the thumbnail links externally
 }
 
@@ -22,7 +23,7 @@ export default function Thumbnail(props: ThumbnailProps) {
             '&:hover': {
                 scale: '1.01',
                 // rotate: props.rotate,
-                backgroundColor: 'white'
+                backgroundColor: props.dark ? 'rgba(0,0,0,0.7)' : 'white'
             },
         }}>
             <Box sx={{
@@ -30,7 +31,6 @@ export default function Thumbnail(props: ThumbnailProps) {
                 display: 'flex',
                 alignItems: 'left',
                 justifyContent: 'center',
-                backgroundColor: 'white',
                 flexDirection: 'column',
                 gap: '10px',
             }}>
@@ -47,10 +47,10 @@ export default function Thumbnail(props: ThumbnailProps) {
                     <Typography variant="body1" sx={{ textTransform: 'none', color: '#5B5B5B' }}>{props.tags}</Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap="1%">
-                    <Typography variant="heading3" fontWeight="600" sx={{ color: 'black' }}> {props.name} </Typography>
+                    <Typography variant="heading3" fontWeight="600" sx={{ color: props.dark ? 'white' : 'black' }}> {props.name} </Typography>
                     <ArrowOutwardIcon sx={{ color: 'black', display: props.external ? 'flex' : 'none' }} />
                 </Box>
-                <Typography variant="body1" sx={{ textTransform: 'none', color: 'black' }}> {props.description} </Typography>
+                <Typography variant="body1" sx={{ textTransform: 'none', color: props.dark ? 'white' : 'black' }}> {props.description} </Typography>
             </Box>
         </Button>
     );

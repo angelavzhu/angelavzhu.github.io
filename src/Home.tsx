@@ -15,6 +15,9 @@ export default function Home() {
     // overall container
     <Box sx={{
       overflowY: 'auto',
+      overflowX: 'hidden',
+      alignItems: 'center',
+      justifyContent: 'center',
       top: '0px', left: '0px', bottom: '0px',
       display: 'flex', flexDirection: 'column',
       backgroundColor: 'white'
@@ -22,6 +25,7 @@ export default function Home() {
       {/* backgroundImage with heading text*/}
       <Box sx={{
         height: '100vh',
+        width: '100vw',
         display: 'flex',
         flexDirection: 'column',
         backgroundImage: `url(${lilyAnimation})`,
@@ -48,7 +52,7 @@ export default function Home() {
             flexDirection: 'column',
             paddingX: '3%',
             paddingY: '1%',
-            width: { xs: '100%', s: '100%', md: '50%', lg: '50%' },
+            width: { xs: '90%', s: '90%', md: '50%', lg: '50%' },
           }}>
             <Stack gap="32px" sx={{
               display: 'flex',
@@ -56,12 +60,10 @@ export default function Home() {
               justifyContent: 'center',
               py: '32px'
             }}>
-              <Box>
+              <Box width="95%">
                 <Typography variant="accent" color="#007700" lineHeight={1.5}> Angela Zhu </Typography>
-                <Typography my="20px" variant="heading2" lineHeight={1.5}>is designing, programming, and illustrating an </Typography>
-                <Typography fontWeight="600" fontSize="30px" variant="heading2">inclusive </Typography>
-                <Typography variant="heading2">world full of </Typography>
-                <Typography variant="heading2" fontSize="30px" fontWeight="500" color="#007700">inspiration.</Typography>
+                <Typography my="20px" variant="heading2" lineHeight={1.5}>is designing, programming, and illustrating an inclusive world full of </Typography>
+                <Typography variant="heading2" fontWeight="500" color="#007700">inspiration.</Typography>
               </Box>
               <Typography variant="heading3" color="#5B5B5B"> currently creating intuitive products at <Link to={"https://www.designconsultingcornell.com/"} target="_blank" rel="noopener noreferrer">Design Consulting @ Cornell</Link></Typography>
             </Stack>

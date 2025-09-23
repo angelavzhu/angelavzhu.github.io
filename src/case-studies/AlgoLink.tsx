@@ -2,9 +2,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Box, Stack, Typography, Button } from '@mui/material'
 import { Link } from "react-router-dom"
 import Footer from "../components/Footer"
+import Thumbnail from "../components/Thumbnail";
 
 import Banner from "../assets/AlgoLink/Banner.png"
-
+import evently from '../assets/evently/banner.png'
+import crc from '../assets/CRSite/thumbnail.png'
 
 const theme = createTheme({
     typography: {
@@ -266,7 +268,35 @@ export default function AlgoLink() {
                     <Typography> Due to NDA, I am unable to share more details about my work. Feel free to reach out if you would like to learn more about my experiences!</Typography>
 
                     <Typography variant="heading2" width="100%" textAlign="center" fontSize="50px"> Thank you for reading!</Typography>
+                    <Typography variant="heading2" width="100%"> UP NEXT: </Typography>
+                    <Stack gap="20px" direction="row" alignItems="start" justifyContent="center" flexWrap="wrap">
+                        <Thumbnail
+                            name="Evently"
+                            mainTag="Design Consulting at Cornell"
+                            tags="/ Mobile / 0 -> 1 Design"
+                            color="#FF6F8D"
+                            imgsrc={evently}
+                            date="Feb - May 2025"
+                            description="Event discovery on campus, personalized. Designing a better event discovery platform to build community and lasting connection."
+                            link="/evently"
+                            dark={true}
+                            width="48%"
+                        />
+                        <Thumbnail
+                            name="Combat Robotics @ Cornell"
+                            mainTag="Website Redesign"
+                            tags="/ Desktop & Mobile / Design Systems"
+                            color="#B21D1D"
+                            imgsrc={crc}
+                            date="Jun - Aug 2025"
+                            description="Re-designing the team website to better encapsulate the team culture and attract new applicants."
+                            link="/crc"
+                            rotate="2deg"
+                            dark={true}
+                            width="48%" />
+                    </Stack>
                 </Box>
+
                 <Footer color="white" />
 
             </Box>

@@ -5,6 +5,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 
 import Footer from "../components/Footer"
+import Thumbnail from "../components/Thumbnail";
 
 import Banner from "../assets/CRSite/banner.png"
 import Team from "../assets/CRSite/team.jpg"
@@ -21,6 +22,8 @@ import mobile1 from "../assets/CRSite/mobile1.png"
 import mobile2 from "../assets/CRSite/mobile2.png"
 import about from "../assets/CRSite/about.png"
 import alana from "../assets/CRSite/alana.png"
+import algolink from '../assets/AlgoLink/Banner.png'
+import evently from '../assets/Evently/banner.png'
 
 import hoverVid from "../assets/CRSite/autonomous-hover.mp4"
 import subteamHoverVid from "../assets/CRSite/team-button-hovers.mp4"
@@ -37,14 +40,14 @@ const theme = createTheme({
             fontWeight: "normal"
         },
         heading2: {
-            color: 'white',
+            color: '#B21D1D',
             fontFamily: "Josefin Sans",
-            fontSize: "1.5rem"
+            fontSize: "1rem"
         },
         heading3: {
             color: 'white',
             fontFamily: "Josefin Sans",
-            fontSize: "1.25rem"
+            fontSize: "2rem"
         },
         body1: {
             color: 'white',
@@ -59,7 +62,7 @@ const theme = createTheme({
     },
     palette: {
         primary: {
-            main: '#B21D1D',
+            main: '#B21C1C',
         },
         background: {
             main: '#1C1C1C',
@@ -86,13 +89,19 @@ export default function CRC() {
                     gap: "40px",
                 }}>
                     <img src={Banner} width="100%" />
+                    <Stack gap="20px">
+                        <Typography variant="heading1"> Combat Robotics @ Cornell </Typography>
+                        <Typography variant="body1"> Initiated a complete redesign of the Combat Robotics @ Cornell project team’s mobile and desktop site to modernize the design system for a more engaging and improved user experience. </Typography>
+
+                    </Stack>
+
                     <Box display=' flex' justifyContent="center" marginBottom="24px">
                         <Button href={"https://combatrobotics.engineering.cornell.edu/"} target="_blank" rel="noopener noreferrer" sx={{
                             backgroundColor: '#4A1C1C',
                             borderRadius: '10px',
                             borderStyle: 'solid',
                             borderWidth: '1px',
-                            width: '70%',
+                            width: '100%',
                             borderColor: '#B21C1C'
                         }}>
                             <Typography variant="body1" textTransform="none">
@@ -100,9 +109,6 @@ export default function CRC() {
                             </Typography>
                         </Button>
                     </Box>
-
-                    <Typography variant="heading1"> Combat Robotics @ Cornell </Typography>
-                    <Typography variant="body1"> Initiated a complete redesign of the Combat Robotics @ Cornell project team’s mobile and desktop site to modernize the design system for a more engaging and improved user experience. </Typography>
                     <Stack direction="row" spacing="auto" width="100%">
                         <Box >
                             <Typography marginBottom="12px"> Team </Typography>
@@ -136,12 +142,14 @@ export default function CRC() {
                             display: "flex",
                             flexDirection: 'column',
                             rowGap: "30px",
-                            width: '45%'
+                            width: { xs: '100%', sm: '100%', md: '45%', lg: '45%' },
                         }}
                         >
-                            <Typography variant="heading2"> How It Started </Typography>
+                            <Stack gap="20px">
+                                <Typography variant="heading2"> PROJECT OVERVIEW </Typography>
+                                <Typography variant="heading3"> Spearheading a website re-design to improve brand identity and image </Typography>
+                            </Stack>
                             <Typography> As a member of the <Link to={"https://combatrobotics.engineering.cornell.edu/"} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Combat Robotics @ Cornell (CRC)</Link> project team, we participate in an annual combat robotics competition, NHRL. This year, the marketing sub-team and I took on the challenge of redesigning our team website to create an immersive web experience in order to promote our team at the event, and for future use in recruitment.</Typography>
-                            <Typography> I took on the role of lead designer to spearhead the re-design of the site, with a goal of creating a new and exciting website that modernized the old design while emphasizing our team’s individuality.</Typography>
                         </Box>
                         <img src={Team} style={{
                             width: '500px',
@@ -154,17 +162,18 @@ export default function CRC() {
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '40px'
+                        gap: '40px',
+                        paddingTop: '40px'
                     }}>
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '24px'
+                            gap: '20px'
                         }}>
-                            <Typography variant="heading2"> Problem Space </Typography>
-                            <Typography variant="heading3" fontStyle="italic"> Creating a better representation of our team. </Typography>
+                            <Typography variant="heading2"> PROBLEM SPACE </Typography>
+                            <Typography variant="heading3"> Creating a better representation of our team </Typography>
                         </Box>
-                        <Typography> Our team had been considering a website redesign for some time, as our current website was designed and programmed by an alumnus over 2 years ago. Many members of the team have agreed that the design did not align with our team’s image, and wanted improvements to the site’s navigation, colors, and theme. However, there were also many aspects of the site that we loved and wanted to maintain. This led us to our question: </Typography>
+                        <Typography> Our team had been considering a website redesign for some time, as our current website was designed and programmed by an alumnus over 2 years ago. However, there were also many aspects of the site that we loved and wanted to maintain. This led us to our question: </Typography>
                         <Box width="100%" display="flex" alignItems="center" justifyContent="center">
                             <Box sx={{
                                 border: '1px solid grey',
@@ -205,10 +214,10 @@ export default function CRC() {
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '24px'
+                            gap: '20px'
                         }}>
-                            <Typography variant="heading2"> User Research </Typography>
-                            <Typography variant="heading3" fontStyle="italic"> Why do we need to redesign the website? </Typography>
+                            <Typography variant="heading2"> USER RESEARCH </Typography>
+                            <Typography variant="heading3"> Do we really need to redesign the website? </Typography>
                         </Box>
                         <Typography> I decided that it was important to get an full perspective on our site from old and new members, to ensure that a website redesign was necessary and would improve our team’s image. Our team had recently finished recruitment, so I created a user survey that was sent to 40+ members of the team, which sought to address the following key concerns: </Typography>
 
@@ -269,7 +278,7 @@ export default function CRC() {
                                 alignItems: 'center'
                             }}>
                                 <Stack gap="32px" width="40%" minWidth="400px">
-                                    <Typography variant="heading3">"The flow of the website didn't feel optimal." </Typography>
+                                    <Typography variant="heading3" fontSize="1.25rem">"The flow of the website didn't feel optimal." </Typography>
                                     <Stack direction="row" gap="2%">
                                         <ClearIcon sx={{ color: 'red' }} />
                                         <Typography variant="body1">Important information is nested in too many subpages</Typography>
@@ -292,7 +301,7 @@ export default function CRC() {
                                 alignItems: 'center'
                             }}>
                                 <Stack gap="32px" width="40%" minWidth="400px">
-                                    <Typography variant="heading3">"So much text." </Typography>
+                                    <Typography variant="heading3" fontSize="1.25rem">"So much text." </Typography>
                                     <Stack direction="row" gap="2%">
                                         <ClearIcon sx={{ color: 'red' }} />
                                         <Typography variant="body1">Pages contained walls of text with no visual variety</Typography>
@@ -315,7 +324,7 @@ export default function CRC() {
                                 alignItems: 'center'
                             }}>
                                 <Stack gap="32px" width="40%" minWidth="400px">
-                                    <Typography variant="heading3">"I love the small details." </Typography>
+                                    <Typography variant="heading3" fontSize="1.25rem">"I love the small details." </Typography>
                                     <Stack direction="row" gap="2%">
                                         <CheckIcon sx={{ color: 'green' }} />
                                         <Typography variant="body1"> Users liked some interactive and unique features</Typography>
@@ -334,12 +343,12 @@ export default function CRC() {
                         </Box>
                         <Typography variant="body1"> I had browsed the site several times and experienced many of the same issues, so the feedback that I received lined up with what I was expecting. However, the perspectives of our new members brought to light some issues with the content of our site, namely the fact that our team’s culture was not clearly conveyed, which was a big concern. Therefore, I synthesized the information into the persona of a prospective applicant to the team.</Typography>
 
-                        <Typography variant="heading3"> User Persona</Typography>
+                        <Typography variant="heading2" color='#8D8D8D'> USER PERSONA </Typography>
 
                         <Stack paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap" direction="row" gap="50px">
                             <img width="200px" src={alana} />
                             <Box display="flex" flexDirection="column">
-                                <Typography paddingBottom="24px" variant="heading3">Alana, Prospective Applicant to CRC (Freshman) </Typography>
+                                <Typography paddingBottom="24px" variant="heading3" fontSize="1.25rem">Alana, Prospective Applicant to CRC (Freshman) </Typography>
                                 <Typography>Goals:</Typography>
                                 <Box marginLeft="20px" display="flex" flexDirection="column">
                                     <ul style={{ color: 'white' }}>
@@ -413,120 +422,138 @@ export default function CRC() {
                     </Box>
 
                     {/* Design System */}
-                    <Box sx={{
-                        display: 'flex',
+                    < Box sx={{
+                        display: "flex",
                         flexDirection: 'column',
-                        gap: '40px'
+                        rowGap: "40px"
                     }}>
-                        <Typography variant="heading2"> Design System</Typography>
-                        <Typography variant="heading3" fontStyle="italic"> A modern take on a familiar brand. </Typography>
-                        <Typography variant="body1"> With a trend towards dark mode in the current competitor landscape, we decided to pivot to a darker, limited color scheme of black and red to associate ourselves with Cornell, and innovation in robotics. </Typography>
-                        <Box sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            gap: "80px",
-                            flexWrap: 'wrap'
+                        < Box sx={{
+                            display: "flex",
+                            flexDirection: 'column',
+                            rowGap: "24px"
                         }}>
-                            {/* Colors */}
+                            <Typography variant="heading2"> DESIGN SYSTEM </Typography>
+                            <Typography variant="heading3" > Creating a consistent and unique brand</Typography>
+                        </Box>
+                        <Typography> We decided to make our designs convey an approachable and polished mood to the consumer, and came up with the following design system. Darker pink and yellow brought excitement for event discovery, and we particularly focused on ensuring spacing and typography was accessible for mobile devices.</Typography>
+
+                        <Box py="40px" width="100%" borderRadius="20px" sx={{
+                            border: '1px solid grey',
+                            flexDirection: 'column',
+                            display: 'flex',
+                            gap: '40px',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}>
+                            {/* top row colors & spacing*/}
                             <Box sx={{
                                 display: "flex",
-                                flexDirection: 'column',
-                                rowGap: "20px",
-                                width: { xs: '100%', sm: '100%', md: '50%', lg: '50%' }
-                            }}>
-                                <Typography variant="heading3"> Colors </Typography>
-                                <Stack direction="row" flexWrap="wrap" gap="20px">
-                                    <Box >
-                                        <Box sx={{ backgroundColor: "#B21D1D", marginBottom: '20px', width: "140px", height: '140px' }} />
-                                        <Typography>#B21D1D</Typography>
-                                    </Box>
-                                    <Box>
-                                        <Box sx={{ backgroundColor: "#FFFFFF", marginBottom: '20px', width: "140px", height: '140px' }} />
-                                        <Typography>#FFFFFF</Typography>
-                                    </Box>
-                                    <Box >
-                                        <Box sx={{ backgroundColor: "#772525", marginBottom: '20px', width: "140px", height: '140px' }} />
-                                        <Typography>#772525</Typography>
-                                    </Box>
-                                    <Box>
-                                        <Box sx={{ backgroundColor: "#ED9191", marginBottom: '20px', width: "140px", height: '140px' }} />
-                                        <Typography>#ED9191</Typography>
+                                flexWrap: 'wrap',
+                                flexDirection: 'row',
+                                justifyContent: 'center',
+                                width: '100%',
+                                gap: { xs: '40px', sm: '40px', md: '8%', lg: '8%' }
 
-                                    </Box>
-                                    <Box>
-                                        <Box marginBottom="20px">
-                                            <Box sx={{ backgroundColor: "#630809", marginBottom: '20px', width: "140px", height: '140px' }} />
+                            }}>
+                                {/* colors */}
+                                <Stack direction="column" gap="20px"
+                                    width='90%'
+                                >
+                                    <Typography variant="heading2" color="#8D8D8D"> COLORS </Typography>
+                                    <Stack direction="row" flexWrap="wrap" gap="20px">
+                                        <Box >
+                                            <Box sx={{ backgroundColor: "#B21D1D", marginBottom: '20px', width: "120px", height: '120px', }} />
+                                            <Typography>#B21D1D</Typography>
+                                        </Box>
+                                        <Box>
+                                            <Box sx={{ backgroundColor: "#FFFFFF", marginBottom: '20px', width: "120px", height: '120px', }} />
+                                            <Typography>#FFFFFF</Typography>
+                                        </Box>
+                                        <Box >
+                                            <Box sx={{ backgroundColor: "#772525", marginBottom: '20px', width: "120px", height: '120px', }} />
+                                            <Typography>#772525</Typography>
+                                        </Box>
+                                        <Box>
+                                            <Box sx={{ backgroundColor: "#ED9191", marginBottom: '20px', width: "120px", height: '120px', }} />
                                             <Typography>#ED9191</Typography>
                                         </Box>
-
-                                    </Box>
+                                        <Box marginBottom="20px">
+                                            <Box sx={{ backgroundColor: "#630809", marginBottom: '20px', width: "120px", height: '120px', }} />
+                                            <Typography>#ED9191</Typography>
+                                        </Box>
+                                        <Box marginBottom="20px">
+                                            <Box sx={{ backgroundColor: "#1C1C1C", marginBottom: '20px', width: "120px", height: '120px', outlineStyle: 'solid', outlineColor: 'white' }} />
+                                            <Typography>#1C1C1C</Typography>
+                                        </Box>
+                                    </Stack>
                                 </Stack>
                             </Box>
-
-                            {/* RHS */}
-                            <Stack gap="64px" sx={{
-                                width: { xs: '100%', sm: '100%', md: '40%', lg: '40%' }
-
+                            <Box sx={{
+                                display: "flex",
+                                flexWrap: 'wrap',
+                                flexDirection: 'row',
+                                justifyContent: 'space-between',
+                                width: '90%',
+                                gap: { xs: '40px', sm: '40px', md: 'auto', lg: 'auto' }
                             }}>
-                                {/* Typography*/}
-                                <Box sx={{
-                                    display: "flex",
-                                    flexDirection: 'column',
-                                    gap: "20px",
-                                }}>
-                                    <Typography variant="heading3"> Typography </Typography>
-                                    <Typography fontFamily="Josefin Sans"> Josefin Sans </Typography>
-                                </Box>
                                 {/* Text */}
                                 <Box sx={{
                                     display: "flex",
                                     flexDirection: 'column',
-                                    gap: "20px",
+                                    gap: '20px',
+                                    width: { xs: '90%', sm: '90%', md: '40%', lg: '40%' },
                                 }}>
-                                    <Typography variant="heading3"> Text Heirarchy </Typography>
+
+                                    <Typography variant="heading2" color="#8D8D8D"> TEXT HIERARCHY </Typography>
                                     <Typography fontSize="40px"> Impact Text (40px) </Typography>
                                     <Typography fontSize="24px"> Header 1 (24px) </Typography>
                                     <Typography fontSize="20px"> Header 2 (20px) </Typography>
                                     <Typography fontSize="16px"> Body 1 (16px) </Typography>
                                     <Typography fontSize="12px"> Descriptor (12px) </Typography>
                                 </Box>
-                            </Stack>
+
+                                {/* Typography*/}
+                                <Box sx={{
+                                    display: "flex",
+                                    flexDirection: 'column',
+                                    width: { xs: '90%', sm: '90%', md: '40%', lg: '40%' },
+                                    gap: { xs: '40px', sm: '40px', md: '8%', lg: '8%' }
+                                }}>
+                                    <Typography variant="heading2" color="#8D8D8D"> TYPOGRAPHY </Typography>
+                                    <Typography> Josefin Sans (universal) </Typography>
+                                </Box>
+                            </Box>
                         </Box>
-
-                        <Box sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            columnGap: "80px",
-                            flexWrap: 'wrap'
-                        }}>
-
-
-
-
-                        </Box>
-
-                    </Box>
-
+                    </Box >
                     {/* Iteration */}
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '40px'
                     }}>
-                        <Typography variant="heading2"> Iterations and Feedback</Typography>
-                        <Typography variant="heading3" fontStyle="italic"> A critical step for improved usability. </Typography>
+                        <Stack gap="20px">
+                            <Typography variant="heading2"> ITERATIONS AND FEEDBACK</Typography>
+                            <Typography variant="heading3"> A critical step for improved usability </Typography>
+                        </Stack>
                         <Typography variant="body1"> Due to time constraints, we had already created high-fidelity designs of our site for developers to begin programming. However, I quickly realized some aspects of our design were confusing for first-time users and needed improvement. This led us to a round of user testing using a combination of Figma prototypes and finished implementations. </Typography>
-                        <Box display="flex" justifyContent="center" alignItems="center" width="100%" sx={{
-                            background: 'linear-gradient(to right,  #1C1C1C, #B21D1D)',
-                            py: '32px',
-                            overflowX: "auto"
-                        }}>
-                            <Typography variant="heading1" width="90%"> This round of testing revealed <b>flaws</b> in our user assumptions and led to <b>significant change</b> and improvements to the site.</Typography>
+                        <Box width="100%" display="flex" alignItems="center" justifyContent="center">
+                            <Box sx={{
+                                border: '1px solid grey',
+                                padding: '7%',
+                                borderRadius: "20px"
+                            }}>
+
+                                <Typography variant="heading1" fontSize="2rem" width="85%"> This round of testing revealed
+                                    <span style={{ color: '#B21D1D', fontWeight: 'bold' }}> flaws </span>
+                                    in our user assumptions and led to
+                                    <span style={{ color: "#B21D1D", fontWeight: 'bold' }}> significant change </span>
+                                    and improvements to the features we designed. </Typography>
+                            </Box>
                         </Box>
 
                         <Typography variant="body1"> We had been working on the design for well over 2 months, and were used to its functionality. Then, when interviewing new users, we were surprised to find that they thought some of the features were confusing and unintuitive.</Typography>
 
-                        <Typography variant="heading3"> Hopeless Hovers</Typography>
+                        <Typography variant="heading3" fontSize="1.5rem"> Hopeless Hovers</Typography>
                         <Typography variant="body1"> In order to compress the text-heavy team descriptions, I abstracted them out into “optional” hover buttons, which displayed a popup when hovering over them. This allowed users to be able to access specific content if they were curious, while not overwhelming others who were looking for a brief overview of each subteam.</Typography>
                         <Box sx={{
                             display: 'flex',
@@ -544,7 +571,7 @@ export default function CRC() {
                         </Box>
 
                         <Typography variant='body1'> But, since the information popups appeared directly on top of the row of buttons (see video), users found it difficult to swap between sections. Therefore, we decided to move the popup to appear above the buttons, which would only cover text that the user has already read. </Typography>
-                        <Typography variant='heading3'>  Connecting Content </Typography>
+                        <Typography variant='heading3' fontSize="1.5rem">  Connecting Content </Typography>
                         <Typography variant='body1'>  Our users’ fresh perspective also brought ideas that greatly improved our information architecture, such as connecting within a page for a linear flow. In this manner, the subteam and new member project pages were individually connected to their relevant pages.</Typography>
                         <Box sx={{
                             display: 'flex',
@@ -565,11 +592,14 @@ export default function CRC() {
                         flexDirection: 'column',
                         gap: '40px'
                     }}>
-                        <Typography variant="heading2"> Final Solutions </Typography>
-                        <Typography variant="heading3" fontStyle="italic"> Improvements that stuck, and new ideas that worked. </Typography>
+                        <Stack gap="20px">
+                            <Typography variant="heading2"> FINAL SOLUTIONS </Typography>
+                            <Typography variant="heading3"> Improvements that stuck, and new ideas that worked </Typography>
+
+                        </Stack>
                         <Stack gap="40px" flexWrap="wrap" direction="row" alignItems='center'>
                             <Box width="500px" >
-                                <Typography variant="heading3"> Introduce The Team </Typography>
+                                <Typography variant="heading3" fontSize="1.5rem"> Introduce The Team </Typography>
                                 <Typography variant="body1" paddingTop="40px"> I added concise summaries of our team to the home page to better represent our team to prospective applicants. Since we still wanted applicants to attend information sessions, this section was meant to be an introduction to the team to pique interest. </Typography>
                             </Box>
                             <img src={about} width="400px" />
@@ -578,13 +608,13 @@ export default function CRC() {
                         <Stack direction="row" gap="40px" alignItems='center' justifyContent="center" flexWrap="wrap">
                             <img src={mobile1} width="25%" style={{ minWidth: '200px' }} />
                             <Box width="25%" style={{ minWidth: '200px' }}>
-                                <Typography variant="heading3" > Mobile Compatibility </Typography>
+                                <Typography variant="heading3" fontSize="1.5rem"> Mobile Compatibility </Typography>
                                 <Typography variant="body1" paddingTop="40px"> We dedicated significant time to ensuring the site was mobile-friendly on both the design and implementation side, as many of our users said they browsed the site on their phones.  </Typography>
                             </Box>
                             <img src={mobile2} width="25%" style={{ minWidth: '200px' }} />
                         </Stack>
 
-                        <Typography variant="heading3"> Maintaining Individuality </Typography>
+                        <Typography variant="heading3" fontSize="1.5rem"> Maintaining Individuality </Typography>
                         <Typography variant="body1"> Finally, since so many of our interviewees enjoyed more interactive and fun elements in our original site, we decided to keep the robot timeline from the original site, and add new and interesting visual elements as well.  </Typography>
                         <Stack gap="24px" sx={{
                             alignItems: 'center',
@@ -621,13 +651,6 @@ export default function CRC() {
                                     Your browser does not support the video tag.
                                 </video>
                             </Box>
-
-
-
-
-
-
-
                         </Stack>
                     </Box>
 
@@ -635,13 +658,51 @@ export default function CRC() {
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '40px'
+                        gap: '20px'
                     }}>
-                        <Typography variant="heading2"> Review and Reflection </Typography>
-                        <Typography variant="heading3" fontStyle="italic"> Lessons learned from a rocky road. </Typography>
-                        <Typography variant="body1"> This was the first product design project I had ever participated in, and I had to lead it, too! As an engineering project team, we did not have designers with previous experience, and as the only member with some Figma knowledge, I was thrust into a role I wasn’t perfectly prepared for. However, necessity is the mother of invention, and I am extremely proud of the progress that not only I, but all my teammates, made in the realm of design and development. If I was to design CRC’s site again, I’d definitely stick to the double-diamond design process, and complete low, mid, and high fidelity prototypes to reduce the need to overhaul designs. </Typography>
-                        <Typography variant="body1"> As a designer and programmer of this project, I was able to learn a lot about what was required for effective communication between the two teams. Through our iterations, I quickly learned that it’s not a good idea to sacrifice user testing for a faster end product. Programmers need designs to implement, of course, but giving a lower fidelity model for them to initially implement while beginning user testing can allow for a quicker turnaround on both programming and design sides if the design doesn’t hold up for users.</Typography>
+                        <Typography variant="heading2"> TAKEAWAYS AND REFLECTION</Typography>
+                        <Typography variant="heading1"> Lessons learned from a rocky road </Typography>
+                        <Stack direction="row" gap="10%">
+                            <Box width="45%">
+                                <Typography variant="body1" fontSize="1.5rem"> Adaptation Is Key </Typography>
+                                <Typography paddingTop="20px" variant="body1"> This was the first product design project I had ever participated in, and since we did not have other designers with previous experience, I was thrust into a leadership role I wasn’t perfectly prepared for. However, necessity is the mother of invention, and I am extremely proud of the progress that not only I, but all my teammates, made in the realm of design and development. </Typography>
+
+                            </Box>
+                            <Box width="45%">
+                                <Typography variant="body1" fontSize="1.5rem"> Balancing Tasks for Efficient Design </Typography>
+                                <Typography variant="body1" paddingTop="20px"> As a designer and programmer of this project, I was able to learn a lot about what was required for effective implementation for both teams. Through our iterations, I quickly learned that it’s not a good idea to sacrifice user testing for a faster end product. Programmers need designs to implement, so giving a design to initially implement while beginning user testing can allow for a quicker turnaround on both programming and design.</Typography>
+                            </Box>
+                        </Stack>
                     </Box>
+
+                    <Typography variant="heading2" width="100%" textAlign="center" fontSize="50px"> Thank you for reading!</Typography>
+                    <Typography variant="heading2" width="100%"> UP NEXT: </Typography>
+                    <Stack gap="20px" direction="row" alignItems="start" justifyContent="center" flexWrap="wrap">
+                        <Thumbnail
+                            name="AlgoLink (Evallos)"
+                            mainTag="Design Internship"
+                            tags="/ Desktop / Startup"
+                            color="#003DF5"
+                            imgsrc={algolink}
+                            date="May 2025 - present"
+                            description="Recruitment done right. Iterating and finalizing product designs for AlgoLink’s jobs and connections features, onboarding, and more."
+                            link="/algolink"
+                            width="48%"
+                            dark={true}
+                            rotate="2deg" />
+                        <Thumbnail
+                            name="Evently"
+                            mainTag="Design Consulting at Cornell"
+                            tags="/ Mobile / 0 -> 1 Design"
+                            color="#FF6F8D"
+                            imgsrc={evently}
+                            date="Feb - May 2025"
+                            description="Event discovery on campus, personalized. Designing a better event discovery platform to build community and lasting connection."
+                            link="/evently"
+                            dark={true}
+                            width="48%"
+                        />
+                    </Stack>
                 </Box>
                 <Footer color="white" />
             </Box>
