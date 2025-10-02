@@ -20,14 +20,14 @@ export default function Thumbnail(props: ThumbnailProps) {
     return (
         <Button href={props.link} sx={{
             width: props.width ? props.width : '100%',
+            transition: 'scale 1s',
             '&:hover': {
-                scale: '1.01',
-                // rotate: props.rotate,
+                scale: '1.05',
                 backgroundColor: props.dark ? 'rgba(0,0,0,0.7)' : 'white'
             },
         }}>
             <Box sx={{
-                minHeight: '200px',
+                minWidth: '300px',
                 display: 'flex',
                 alignItems: 'left',
                 justifyContent: 'center',
@@ -38,7 +38,7 @@ export default function Thumbnail(props: ThumbnailProps) {
                 <img src={props.imgsrc} style={{
                     width: "100%",
                     minHeight: '200px',
-                    minWidth: '300px',
+                    borderRadius: '12px',
                     objectFit: 'cover',
                     display: props.imgsrc ? 'flex' : 'none'
                 }} />

@@ -14,7 +14,7 @@ import korean from "./assets/about/img3.jpg"
 
 export default function About() {
     return (
-        <Box marginTop="80px" mx="15%" >
+        <Box marginTop="80px" mx="16%" >
             {/* foreground */}
             <Box sx={{
                 height: '100vh',
@@ -91,7 +91,7 @@ export default function About() {
             <Typography variant="heading3" sx={{
                 color: "#007700"
             }}>
-                DESIGN VALUES
+                WHY DESIGN?
             </Typography>
             <Typography variant="body1" paddingTop="20px">
                 From my work, I've realized product design is nothing without
@@ -169,26 +169,26 @@ export default function About() {
             }}>
                 <img src={Umamusume}
                     style={{
-                        width: '210px',
-                        height: '300px',
+                        width: '200px',
+                        height: '290px',
                         objectFit: 'cover'
                     }} />
                 <img src={Persona}
                     style={{
-                        width: '210px',
-                        height: '300px',
+                        width: '200px',
+                        height: '290px',
                         objectFit: 'cover'
                     }} />
                 <img src={BOTW}
                     style={{
-                        width: '210px',
-                        height: '300px',
+                        width: '200px',
+                        height: '290px',
                         objectFit: 'cover'
                     }} />
                 <img src={Morimens}
                     style={{
-                        width: '210px',
-                        height: '300px',
+                        width: '190px',
+                        height: '290px',
                         objectFit: 'cover'
                     }} />
 
@@ -202,14 +202,19 @@ export default function About() {
             }}> Gotta catch 'em all! But you can catch me at
             </Typography>
 
-            <Typography variant="body1" sx={{
+            <Typography variant="heading2" sx={{
                 textAlign: "center",
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 my: '30px'
             }}>
-                <Link to={"mailto:angelzhua@gmail.com"} target="_blank" rel="noopener noreferrer">angelzhua@gmail.com </Link>
+                <Link to={"mailto:avz7@cornell.edu"} target="_blank" rel="noopener noreferrer" style={{
+                    color: '#007700',
+                    'a:visited': {
+                        color: '#007700',
+                    },
+                }}>avz7@cornell.edu </Link>
 
             </Typography>
         </Box >

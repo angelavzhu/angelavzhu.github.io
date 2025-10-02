@@ -19,7 +19,7 @@ import Lilypads from './assets/lilypads.jpg'
 export default function Play() {
     return (
         // overall container
-        <Box marginTop="80px" mx="10%" sx={{
+        <Box marginTop="80px" mx="16%" sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
