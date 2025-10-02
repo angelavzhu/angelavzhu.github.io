@@ -115,6 +115,30 @@ export default function AlgoLink() {
                     }}>
                         <Typography variant="heading2"> This case study is currently a <b>work in progress</b>, stay tuned!</Typography>
                     </Box>
+
+                    <Typography variant="heading3" width="100%"> UP NEXT: </Typography>
+                    <Stack gap="20px" direction="row" alignItems="start" justifyContent="center" flexWrap="wrap">
+                        <Thumbnail
+                            name="AlgoLink (Evallos)"
+                            mainTag="Design Internship"
+                            tags="/ Desktop / Startup"
+                            color="#003DF5"
+                            imgsrc={algolink}
+                            link="/algolink"
+                            width="48%"
+                            dark={false}
+                            rotate="2deg" />
+                        <Thumbnail
+                            name="Evently"
+                            mainTag="Design Consulting at Cornell"
+                            tags="/ Mobile / 0 -> 1"
+                            color="#FF6F8D"
+                            imgsrc={evently}
+                            link="/evently"
+                            dark={false}
+                            width="48%"
+                        />
+                    </Stack>
                 </Box>
             </Box>
         </ThemeProvider >

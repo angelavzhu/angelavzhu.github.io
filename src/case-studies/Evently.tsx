@@ -41,7 +41,7 @@ const theme = createTheme({
     typography: {
         heading1: {
             fontFamily: "Work Sans",
-            fontSize: "1.75rem",
+            fontSize: "3rem",
             fontWeight: "bold"
         },
         heading2: {
@@ -160,14 +160,14 @@ export default function Evently() {
                     <Box py="40px" px="10%" width="100%" borderRadius="20px" sx={{
                         border: '1px solid grey'
                     }}>
-                        <Typography variant="heading1" fontWeight="normal" textAlign="center"> How might we </Typography>
-                        <Typography variant="heading1" textAlign="center" sx={{
+                        <Typography variant="heading3" fontWeight="normal" textAlign="center"> How might we </Typography>
+                        <Typography variant="heading3" textAlign="center" sx={{
                             background: 'linear-gradient(to right,  #FFC23F, #FF6F8D)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                         }}> improve the accessibility </Typography>
-                        <Typography variant="heading1" fontWeight="normal" textAlign="center"> of campus events and  </Typography>
-                        <Typography variant="heading1" textAlign="center" sx={{
+                        <Typography variant="heading3" fontWeight="normal" textAlign="center"> of campus events and  </Typography>
+                        <Typography variant="heading3" textAlign="center" sx={{
                             background: 'linear-gradient(to right,  #FFC23F, #FF6F8D)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
@@ -192,7 +192,7 @@ export default function Evently() {
                             }}>
                                 <img src={solution1} height="400px" />
                                 <Box width="300px">
-                                    <Typography variant="heading1"> Helping events reach the right audience </Typography>
+                                    <Typography variant="heading3"> Helping events reach the right audience </Typography>
                                     <Typography marginTop="30px">I designed a recommendation feed with overall top events and specific user-based recommendations to encourage event exploration</Typography>
                                 </Box>
                             </Box>
@@ -206,7 +206,7 @@ export default function Evently() {
                                 paddingLeft: '15%'
                             }}>
                                 <Box width="300px">
-                                    <Typography variant="heading1"> Forming Connection </Typography>
+                                    <Typography variant="heading3"> Forming Connection </Typography>
                                     <Typography marginTop="30px">I created a profile hub to track organizations and friends so students can find communities and attend events together</Typography>
                                 </Box>
                                 <img src={solution2} height="400px" />
@@ -221,7 +221,7 @@ export default function Evently() {
                             }}>
                                 <img src={solution3} height="400px" />
                                 <Box width="300px">
-                                    <Typography variant="heading1"> Encouraging Involvement </Typography>
+                                    <Typography variant="heading3"> Encouraging Involvement </Typography>
                                     <Typography marginTop="30px">I included a quick and easy feedback feature to encourage more students to leave event reviews</Typography>
                                 </Box>
                             </Box>
@@ -240,8 +240,8 @@ export default function Evently() {
                             <SectionTag textColor="#000000" secondaryColor="#FF6F8D" backgroundColor="#FFE8ED" text="RESEARCH" />
                             <Typography variant="heading3" marginBottom="40px">A convenient way to find interesting events is almost nonexistent</Typography>
                             <Typography variant="heading2" color="#5B5B5B">MARKET RESEARCH </Typography>
+                            <Typography> To begin addressing the problem, I first researched existing products to see if there was a gap in the market.</Typography>
                         </Box>
-
                         {/* box with compet analysis */}
                         <Box py="40px" width="100%" borderRadius="20px" sx={{
                             border: '1px solid grey',
@@ -393,9 +393,9 @@ export default function Evently() {
                             scrollMargin: '90px'
                         }}>
                             <SectionTag textColor="#000000" secondaryColor="#FF6F8D" backgroundColor="#FFE8ED" text="USER INTERVIEWS" />
-                            <Typography variant="heading3"> Analyzing event attendance from a social and individual lens </Typography>
+                            <Typography variant="heading3"> Students attend events to pursue their passions and connect with others on campus </Typography>
                         </Stack>
-                        <Typography> With this new knowledge, I conducted several formal interviews with Cornell with the goal of understanding students' processes for discovering and attending events.</Typography>
+                        <Typography> I conducted several formal interviews with Cornell with the goal of understanding students' processes for discovering and attending events.</Typography>
                         <Box sx={{
                             display: "flex",
                             flexDirection: 'column',
@@ -435,8 +435,8 @@ export default function Evently() {
                         <Box py="40px" px="10%" width="100%" borderRadius="20px" sx={{
                             border: '1px solid grey'
                         }}>
-                            <Typography variant="heading1" fontWeight="normal" textAlign="center"> We were surprised to find that event attendance is</Typography>
-                            <Typography variant="heading1" textAlign="center" sx={{
+                            <Typography variant="heading3" fontWeight="normal" textAlign="center"> We were surprised to find that event attendance is</Typography>
+                            <Typography variant="heading3" textAlign="center" sx={{
                                 background: 'linear-gradient(to right,  #FFC23F, #FF6F8D)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -517,56 +517,31 @@ export default function Evently() {
 
                         <Typography> We synthesized the gathered information into 2 main user personas: the <b>event attendee</b>, and <b>event organizer</b>. </Typography>
 
-                        <Box>
-                            <Typography variant="heading2" color="#5B5B5B"> USER PERSONAS </Typography>
-                            <Stack paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap" direction="row" gap="50px">
-                                <img src={bill} width="200px" />
-                                <Box display="flex" flexDirection="column">
-                                    <Typography paddingBottom="24px" variant="body1" fontSize="1.25rem">Bill, Event Attendee (Freshman) </Typography>
-                                    <Typography>Goals:</Typography>
-                                    <Box marginLeft="20px" display="flex" flexDirection="column">
-                                        <ul>
-                                            <li> <Typography> Attend more events to find a community on campus</Typography></li>
-                                            <li> <Typography> Discover fun events that fit in his schedule</Typography> </li>
-                                        </ul>
-                                    </Box>
-                                    <Typography>Painpoints:</Typography>
-                                    <Box marginLeft="20px" display="flex" flexDirection="column">
-                                        <ul>
-                                            <li> <Typography> Doesn’t know if his friends will attend an event with him</Typography></li>
-                                            <li> <Typography> Overwhelmed by options and doesn’t know what events are good</Typography> </li>
-                                        </ul>
-                                    </Box>
+                        <Typography variant="heading2" color="#5B5B5B"> USER PERSONAS </Typography>
+                        <Stack display="flex" alignItems="center" justifyContent="center" flexWrap="wrap" direction="row" gap="50px">
+                            <img src={bill} width="200px" />
+                            <Box display="flex" flexDirection="column">
+                                <Typography paddingBottom="24px" variant="body1" fontSize="1.25rem">Bill, Event Attendee (Freshman) </Typography>
+                                <Typography>Goals:</Typography>
+                                <Box marginLeft="20px" display="flex" flexDirection="column">
+                                    <ul>
+                                        <li> <Typography> Attend more events to find a community on campus</Typography></li>
+                                        <li> <Typography> Discover fun events that fit in his schedule</Typography> </li>
+                                    </ul>
                                 </Box>
-                            </Stack>
-
-                            <Stack paddingTop="20px" paddingBottom="40px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap" direction="row" gap="50px">
-                                <img src={jennie} width="200px" />
-
-                                <Box>
-                                    <Typography paddingBottom="20px" variant="body1" fontSize="1.25rem">Jennie, Event Organizer (Junior) </Typography>
-                                    <Typography >Goals:</Typography>
-                                    <Box marginLeft="20px" display="flex" flexDirection="column">
-                                        <ul>
-                                            <li> <Typography> Advertise her event to the correct audience</Typography></li>
-                                            <li> <Typography> Get feedback on her events and improve them</Typography> </li>
-                                        </ul>
-                                    </Box>
-
-                                    <Typography>Painpoints:</Typography>
-                                    <Box marginLeft="20px" display="flex" flexDirection="column">
-                                        <ul>
-                                            <li> <Typography> Club events keep attracting the same people</Typography></li>
-                                            <li> <Typography> Must advertise her events in an overwhelming number of platforms</Typography> </li>
-                                        </ul>
-                                    </Box>
+                                <Typography>Painpoints:</Typography>
+                                <Box marginLeft="20px" display="flex" flexDirection="column">
+                                    <ul>
+                                        <li> <Typography> Doesn’t know if his friends will attend an event with him</Typography></li>
+                                        <li> <Typography> Overwhelmed by options and doesn’t know what events are good</Typography> </li>
+                                    </ul>
                                 </Box>
-                            </Stack>
+                            </Box>
+                        </Stack>
 
-                            <Typography my="40px"> We decided to <b>focus on the event attendee </b>due to the scope of the project, and created the following journey map of the main issues that students face when attending a campus event.</Typography>
+                        <Typography my="40px"> Next, we created the following journey map of the main issues that students face when attending a campus event.</Typography>
 
-                            <img src={journey} width="100%" />
-                        </Box>
+                        <img src={journey} width="100%" />
                     </Box >
 
                     {/* Ideation */}
@@ -584,13 +559,6 @@ export default function Evently() {
                             <Typography variant="heading3">Developing solutions to form communities and encourage exploration</Typography>
                         </Stack>
                         <Typography>Now, with a comprehensive understanding of our problem space, we began sketching possible solutions to our questions. We kept the following considerations in mind:</Typography>
-                        <Typography>
-                            <ol>
-                                <li><Typography>Integrate <b>personalization</b> into event discovery through a feed, with recommendations and areas to explore </Typography></li>
-                                <li><Typography>Build communities by <b>following the activity</b> of compatible clubs and friends, but <b>without becoming</b> a <b>social media platform</b> </Typography></li>
-                                <li><Typography>Ensure the product is <b>intuitive and easy to use</b>, and integrate preexisting, <b>reliable design patterns</b> to maximize user experience and trust </Typography></li>
-                            </ol>
-                        </Typography>
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'row',
@@ -636,8 +604,8 @@ export default function Evently() {
                             <Typography variant="heading3">Honing in on the best solution for humans, by humans</Typography>
                         </Box>
                         <Typography>We took the best ideas from our ideation and presented our ideas to 12 senior members of the team, and received the following feedback.</Typography>
-                        <Typography variant="heading1" fontSize="1.5rem">A New, Yet Familiar Interface</Typography>
-                        <Typography>I designed the profile interface with the intention of being a one-stop shop for all essential features for the user. However, when presenting this to new users, I realized that it was trying to cram too many features into one section-- a jack of all trades, master of none.</Typography>
+                        <Typography variant="heading1" fontSize="1.5rem">A New Product With Familiar Patterns</Typography>
+                        <Typography>I designed the profile interface with the intention of being a one-stop shop for all essential features. However, when presenting this to new users, I realized that it was trying to cram too many features into one section and had unfamiliar UI patterns.</Typography>
                         <Box sx={{
                             display: 'flex',
                             justifyContent: 'center'
@@ -645,8 +613,8 @@ export default function Evently() {
                             <img src={issue1} height="auto" width="50%" />
 
                         </Box>
-                        < Typography variant="heading1" fontSize="1.5rem"> Big Changes for Bigger Impacts</Typography >
-                        <Typography>A significant issue more than half of our reviewers noted was with our discover page, arguably the most important page for our product. The original design was intended to provide many different sections of events for the user to discover new and exciting listings, but again, this page suffered from information overload and an unintuitive interface.</Typography>
+                        < Typography variant="heading1" fontSize="1.5rem"> Overwhelming Layouts </Typography >
+                        <Typography> A significant issue more than half of our reviewers noted was with the discover page. The original design was intended to provide many different sections of events to discover, but this page suffered from information overload and an unintuitive interface.</Typography>
                         <Box sx={{
                             display: 'flex',
                             justifyContent: 'center'
@@ -670,7 +638,6 @@ export default function Evently() {
                             <Typography variant="heading2"> DESIGN SYSTEM </Typography>
                             <Typography variant="heading3" > Creating a consistent and unique brand</Typography>
                         </Box>
-                        <Typography> We decided to make our designs convey an approachable and polished mood to the consumer, and came up with the following design system. Darker pink and yellow brought excitement for event discovery, and we particularly focused on ensuring spacing and typography was accessible for mobile devices.</Typography>
 
                         <Box py="40px" width="100%" borderRadius="20px" sx={{
                             border: '1px solid grey',
@@ -817,7 +784,7 @@ export default function Evently() {
                                 minHeight: '100vh'
                             }}>
 
-                            <Typography width="100%" textAlign="center" variant="heading1" fontWeight="bold"> Evently: Lessons Learned </Typography>
+                            <Typography width="100%" textAlign="center" variant="heading3" fontWeight="bold"> Evently: Lessons Learned </Typography>
                             <Typography textAlign="center" width="100%"> Your review will be sent directly to the event organizers so they can continue to improve future events. </Typography>
                             <Box>
                                 <Typography marginBottom="10px"> Event Rating </Typography>
@@ -833,7 +800,6 @@ export default function Evently() {
                                 <Typography paddingBottom="10px"> What Went Well </Typography>
                                 <Box padding="20px" borderRadius="10px" sx={{ border: 1 }}>
                                     <Typography marginBottom="24px"> This was my first case study! Going through the entire human-centered design process taught me the <b>importance of user testing and consistent feedback. </b> I also learned:</Typography>
-
                                     <ol>
                                         <li> <Typography marginBottom="24px">Unique interfaces may be fun to create, but don’t always make an app that consumers will want to use.</Typography></li>
                                         <li> <Typography marginBottom="24px">Feedback and iteration are essential to create products that prioritize a pleasant user experience. </Typography></li>
@@ -850,11 +816,11 @@ export default function Evently() {
 
                                 <Typography paddingBottom="10px"> What Could Be Improved </Typography>
                                 <Box padding="20px" borderRadius="10px" sx={{ border: 1, backgroundColor: 'white' }}>
-                                    <Typography marginBottom="24px"> Due to a shorter project duration, I was <b>unable to fully develop some of the interesting edge cases</b> that came up in our user research. If I were to create Evently again, I would want to put more focus on developing the friends feature.  </Typography>
-                                    <Typography marginBottom="24px">
-                                        Event attendance can be a social decision, so having a more formalized way to access friends other than seeing their activity in event pages would make Evently a more interesting and engaging app. </Typography>
-                                    <Typography>
-                                        This, plus creating an interface for event organizers to use the app, would be able to <b>fully address the issues that were frequently brought up</b> during our research.</Typography>
+                                    <Typography marginBottom="24px"> Due to a shorter project duration, I was <b>unable to fully develop some of the interesting edge cases</b> that came up in our user research. If I were to create Evently again, I would: </Typography>
+                                    <ol>
+                                        <li> <Typography marginBottom="24px"> Put more focus on <b>integrating the friends feature</b> with a formalized way to access friends. </Typography></li>
+                                        <li> <Typography marginBottom="24px"> Add features to <b>address the event organizer</b> persona, which was brought up in our research. </Typography></li>
+                                    </ol>
                                 </Box>
                                 <Typography marginBottom="40px" sx={{
                                     width: '100%',
@@ -897,8 +863,6 @@ export default function Evently() {
                             tags="/ Desktop / Startup"
                             color="#003DF5"
                             imgsrc={algolink}
-                            date="May 2025 - present"
-                            description="Recruitment done right. Iterating and finalizing product designs for AlgoLink’s jobs and connections features, onboarding, and more."
                             link="/algolink"
                             width="400px"
                             rotate="2deg" />
@@ -906,11 +870,9 @@ export default function Evently() {
                         <Thumbnail
                             name="Combat Robotics @ Cornell"
                             mainTag="Website Redesign"
-                            tags="/ Desktop & Mobile / Design Systems"
+                            tags="/ Desktop & Mobile"
                             color="#B21D1D"
                             imgsrc={crc}
-                            date="Jun - Aug 2025"
-                            description="Re-designing the team website to better encapsulate the team culture and attract new applicants."
                             link="/crc"
                             rotate="2deg"
                             width="400px" />

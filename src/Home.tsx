@@ -78,8 +78,8 @@ export default function Home() {
               <Typography variant="heading1" fontSize="2rem" fontWeight="500" color="#007700">inspiration.</Typography>
             </Box>
             <Box>
-              <Typography variant="heading3" color="#5B5B5B" textAlign="center" width="100%"> Currently at </Typography>
-              <Typography variant="heading3" sx={{
+              <Typography variant="heading2" color="#5B5B5B" textAlign="center" width="100%"> Currently at </Typography>
+              <Typography variant="heading2" sx={{
                 fontWeight: 'bold',
                 '&:hover': {
                   background: 'linear-gradient(to right, #4285F4 0% 20%, #EA4335 20% 40%, #FAC10B 40% 55%, #4285F4 55% 75%, #34A853 66.67% 83.33%, #EA4335 83.33% 100%)',
@@ -89,7 +89,7 @@ export default function Home() {
                   display: 'inline-block',
                 }
               }}>Google</Typography>
-              <Typography variant="heading3" color="#5B5B5B" >, previously at multiple startups.</Typography>
+              <Typography variant="heading2" color="#5B5B5B" >, previously at multiple startups.</Typography>
 
             </Box>
           </Stack>

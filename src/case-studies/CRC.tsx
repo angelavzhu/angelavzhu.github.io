@@ -731,6 +731,8 @@ export default function CRC() {
                     </Box>
 
                     <Typography variant="heading1" width="100%" textAlign="center"> Thank you for reading!</Typography>
+
+                    {/* Up next */}
                     <Typography variant="heading2" width="100%"> UP NEXT: </Typography>
                     <Stack gap="20px" direction="row" alignItems="start" justifyContent="center" flexWrap="wrap">
                         <Thumbnail
