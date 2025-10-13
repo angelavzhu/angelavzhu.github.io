@@ -192,7 +192,7 @@ export default function Evently() {
                             }}>
                                 <img src={solution1} height="400px" />
                                 <Box width="300px">
-                                    <Typography variant="heading3"> Helping events reach the right audience </Typography>
+                                    <Typography variant="heading3"> Helping Events Reach The Right Audience </Typography>
                                     <Typography marginTop="30px">I designed a recommendation feed with overall top events and specific user-based recommendations to encourage event exploration</Typography>
                                 </Box>
                             </Box>

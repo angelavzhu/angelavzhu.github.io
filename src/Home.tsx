@@ -75,7 +75,7 @@ export default function Home() {
             <Typography variant="accent" fontSize="4rem" color="#007700" lineHeight={1.5} width="100%" textAlign="center"> Angela Zhu </Typography>
             <Box textAlign="center" marginBottom="32px" marginTop="16px">
               <Typography variant="heading1" fontSize="2rem" lineHeight={1.5}>Designer and programmer that distills bold ideas into </Typography>
-              <Typography variant="heading1" fontSize="2rem" fontWeight="500" color="#007700">concrete, scalable products.</Typography>
+              <Typography variant="heading1" fontSize="2rem" fontWeight="500" color="#007700">thoughtful, scalable products.</Typography>
             </Box>
             <Box>
               <Typography variant="heading3" color="#5B5B5B" textAlign="center" width="100%"> Currently designing experiences for </Typography>
@@ -128,7 +128,7 @@ export default function Home() {
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-          <Thumbnail name="Evallos (Formerly AlgoLink)" mainTag="Design Internship" tags="/ Desktop / Startup" color="#003DF5" imgsrc={algolink} description="[Under NDA] Owned 6 core product features including job boards, messaging, onboarding, and more. Scaled the platform by introducing evaluation and improvement services for AI models. " link="/algolink" />
+          <Thumbnail name="Evallos (Formerly AlgoLink)" mainTag="Design Internship" tags="/ Desktop / Startup" color="#003DF5" imgsrc={algolink} description="Owned 6 core product features including job boards, messaging, onboarding, and more. Scaled the platform by introducing evaluation and improvement services for AI models. " link="/algolink" />
           <Thumbnail name="Evently" mainTag="Design Consulting at Cornell" tags="/ Mobile / 0 -> 1 Design" color="#FF6F8D" imgsrc={evently} description="Prototyped a mobile app to streamline the event discovery process at Cornell with a focus on community and lasting connection." link="/evently" rotate="-2deg" />
           <Thumbnail name="Google" mainTag="Design Consultant (Contract)" tags="/ Mobile / UXR" color="#000000" imgsrc={google} description="[In Progress] Designing and evaluating user experiences to engage college-age users with Google products. " link="/google" />
           <Thumbnail name="Combat Robotics @ Cornell" mainTag="Website Redesign" tags="/ Desktop & Mobile / Design Systems" color="#B21D1D" imgsrc={crc} description="Led a full website redesign including information architecture, site structure, and visual branding to create more intuitive navigation and attract more applicants." link="/crc" rotate="2deg" />
