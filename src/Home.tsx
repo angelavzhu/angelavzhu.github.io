@@ -78,7 +78,7 @@ export default function Home() {
               <Typography variant="heading1" fontSize="2rem" fontWeight="500" color="#007700">thoughtful, scalable products.</Typography>
             </Box>
             <Box>
-              <Typography variant="heading3" color="#5B5B5B" textAlign="center" width="100%"> Currently designing experiences for </Typography>
+              <Typography variant="heading3" color="#5B5B5B" textAlign="center" width="100%"> Currently a student consultant working with </Typography>
               <Typography variant="heading3" sx={{
                 fontWeight: 'bold',
                 '&:hover': {
@@ -89,7 +89,6 @@ export default function Home() {
                   display: 'inline-block',
                 }
               }}>Google</Typography>
-              <Typography variant="heading3" color="#5B5B5B" >, previously at multiple startups.</Typography>
 
             </Box>
           </Stack>
