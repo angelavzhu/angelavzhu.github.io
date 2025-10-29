@@ -193,7 +193,7 @@ export default function Evently() {
                                 <img src={solution1} height="400px" />
                                 <Box width="300px">
                                     <Typography variant="heading3"> Helping Events Reach The Right Audience </Typography>
-                                    <Typography marginTop="30px">I designed a recommendation feed with overall top events and specific user-based recommendations to encourage event exploration</Typography>
+                                    <Typography marginTop="30px">I designed a recommendation feed with overall top events and specific user-based recommendations to encourage event exploration.</Typography>
                                 </Box>
                             </Box>
 
@@ -207,7 +207,7 @@ export default function Evently() {
                             }}>
                                 <Box width="300px">
                                     <Typography variant="heading3"> Forming Connection </Typography>
-                                    <Typography marginTop="30px">I created a profile hub to track organizations and friends so students can find communities and attend events together</Typography>
+                                    <Typography marginTop="30px">I created a profile hub to track organizations and friends so students can find communities and attend events together.</Typography>
                                 </Box>
                                 <img src={solution2} height="400px" />
                             </Box>
@@ -222,7 +222,7 @@ export default function Evently() {
                                 <img src={solution3} height="400px" />
                                 <Box width="300px">
                                     <Typography variant="heading3"> Encouraging Involvement </Typography>
-                                    <Typography marginTop="30px">I included a quick and easy feedback feature to encourage more students to leave event reviews</Typography>
+                                    <Typography marginTop="30px">I included a quick and easy feedback feature to encourage more students to leave event reviews.</Typography>
                                 </Box>
                             </Box>
                         </Box>
@@ -344,7 +344,7 @@ export default function Evently() {
                             gap: '24px'
                         }}>
                             <Typography variant="heading2" color="#5B5B5B"> LITERATURE REVIEW </Typography>
-                            <Typography> I reviewed 3 academic journal araticles regarding social app design and noted the following: </Typography>
+                            <Typography> I reviewed 3 academic journal articles regarding social app design and noted the following: </Typography>
                         </Box>
 
                         <Box sx={{
@@ -558,7 +558,7 @@ export default function Evently() {
                             <SectionTag textColor="#000000" secondaryColor="#FF6F8D" backgroundColor="#FFE8ED" text="IDEATION" />
                             <Typography variant="heading3">Developing solutions to form communities and encourage exploration</Typography>
                         </Stack>
-                        <Typography>Now, with a comprehensive understanding of our problem space, we began sketching possible solutions to our questions. We kept the following considerations in mind:</Typography>
+                        <Typography>Now, with a comprehensive understanding of our problem space, we began sketching possible solutions to our questions.</Typography>
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'row',

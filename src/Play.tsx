@@ -3,11 +3,13 @@ import { Link } from "react-router-dom"
 
 import lilypads from './assets/lilypad-background.png'
 import Portrait from './assets/Play/portrait.jpg'
+import Portrait2 from './assets/Play/portrait2.jpg'
 import Grandma from './assets/Play/grandma.jpg'
 import BCan from './assets/Play/black-can.png'
 import WCan from './assets/Play/white-can.png'
 import RCan from './assets/Play/red-can.png'
 import Powerpuff from './assets/Play/powerpuff.jpg'
+import Kulu from './assets/Play/kulu.jpg'
 import Horse1 from './assets/Play/horse-black.png'
 import Horse2 from './assets/Play/horse-white.png'
 import Meep1 from './assets/Play/meep-black.png'
@@ -41,8 +43,21 @@ export default function Play() {
             }} />
             <Stack direction="row" gap="50px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap">
                 <Box width="40%" minWidth="200px" gap='50px' display="flex" alignItems="center" flexDirection="column">
+                    <img src={Portrait2} width="100%" height="100%" />
+                    <Typography variant="body2" color="#5B5B5B"> Portrait, 2025 </Typography>
+                </Box>
+
+                <Box width="40%" minWidth="200px" gap="50px" display="flex" alignItems="center" flexDirection="column">
                     <img src={Portrait} width="100%" height="100%" />
                     <Typography variant="body2" color="#5B5B5B"> Portrait, 2024 </Typography>
+                </Box>
+
+            </Stack>
+
+            <Stack direction="row" gap="50px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap">
+                <Box width="40%" minWidth="200px" gap='50px' display="flex" alignItems="center" flexDirection="column">
+                    <img src={Kulu} width="100%" height="100%" />
+                    <Typography variant="body2" color="#5B5B5B"> Illustration, 2025 </Typography>
                 </Box>
 
                 <Box width="40%" minWidth="200px" gap="50px" display="flex" alignItems="center" flexDirection="column">
