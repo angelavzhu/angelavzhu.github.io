@@ -1,20 +1,19 @@
+import Navigation from "../components/Navigation";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Karla } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const karla = Karla({
+  subsets: ['latin'],
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Angela Zhu",
   description: "Angela's design portfolio",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -23,8 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={karla.className}>
+        <a className="sr-only focus:not-sr-only" href="#maincontent">
+          Skip to main content
+        </a>
+        <Navigation />
+        <main id="maincontent">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

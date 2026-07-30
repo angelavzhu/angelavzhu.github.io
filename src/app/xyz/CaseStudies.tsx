@@ -1,7 +1,7 @@
 "use client"
 import Background from "@/components/ui/background";
 import { useEffect, useState } from "react";
-import img from "@/assets/logo.png";
+import footer from "@/assets/footer.png";
 
 const COMPANIES = ["SageSure", "NYBG", "Google (DCC)", "Evallos"] as const;
 type Company = typeof COMPANIES[number];
@@ -20,35 +20,36 @@ const CASE_STUDIES: Record<Company, { title: string; tags: { label: string; colo
     SageSure: {
         title: "Design Systems Intern @ SageSure",
         tags: [
-            { label: "Enterprise Design", color: "#9add8e", textColor: "text-black" },
+            { label: "HAI Interaction", color: "#9add8e", textColor: "text-black" },
             { label: "Design Ops", color: "#59ac64", textColor: "text-black" },
             { label: "Design Systems", color: "#0b4e14", textColor: "text-white" },
         ],
-        description: "Words about what I did at sagesure that should be a brief 1-2 sentence summary that hits key points and or metrics.",
+        description: "Explored tooling, AI components, and streamlined workflows to encourage human exploration within AI-heavy workflows.",
     },
     NYBG: {
         title: "UX Designer @ NYBG",
         tags: [
-            { label: "User Research", color: "#9add8e", textColor: "text-black" },
-            { label: "Interaction Design", color: "#59ac64", textColor: "text-black" },
+            { label: "B2B Design", color: "#9add8e", textColor: "text-black" },
+            { label: "Licensing", color: "#59ac64", textColor: "text-black" },
+            { label: "Digital Asset Management", color: "#0b4e14", textColor: "text-white" },
         ],
-        description: "Words about what I did at NYBG that should be a brief 1-2 sentence summary that hits key points and or metrics.",
+        description: "Transformed NYBG's botanical archive into a trusted digital workspace where clients can discover, curate, and manage assets with confidence.",
     },
     "Google (DCC)": {
         title: "Product Designer @ Google DCC",
         tags: [
-            { label: "Product Design", color: "#9add8e", textColor: "text-black" },
-            { label: "Design Systems", color: "#0b4e14", textColor: "text-white" },
+            { label: "User Research", color: "#9add8e", textColor: "text-black" },
+            { label: "Wireframing", color: "#59ac64", textColor: "text-black" },
         ],
-        description: "Words about what I did at Google DCC that should be a brief 1-2 sentence summary that hits key points and or metrics.",
+        description: "Designed and evaluated user experiences to engage college-age users with Google products.",
     },
     Evallos: {
-        title: "UX Designer @ Evallos",
+        title: "Founding Designer @ Evallos",
         tags: [
-            { label: "UX Design", color: "#9add8e", textColor: "text-black" },
-            { label: "Prototyping", color: "#59ac64", textColor: "text-black" },
+            { label: "Education", color: "#9add8e", textColor: "text-black" },
+            { label: "Startup", color: "#59ac64", textColor: "text-black" },
         ],
-        description: "Words about what I did at Evallos that should be a brief 1-2 sentence summary that hits key points and or metrics.",
+        description: "Owned 6 core product features and scaled a recruitment platform by introducing evaluation and improvement services for AI models.",
     },
 };
 
@@ -61,10 +62,9 @@ function FixedPillsBar({ activeSection }: { activeSection: SectionId }) {
     const onHero = activeSection === "hero";
     return (
         <div
-            className="fixed left-0 right-0 z-40 flex justify-center gap-[20px] items-center px-[60px] py-[16px]"
+            className="fixed left-2 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-[15px] items-start"
             style={{
-                top: "96px",
-                opacity: onHero ? 0 : 1,
+                display: onHero ? "none" : "flex",
                 pointerEvents: onHero ? "none" : "auto",
                 transition: "opacity 300ms ease",
             }}
@@ -79,7 +79,9 @@ function FixedPillsBar({ activeSection }: { activeSection: SectionId }) {
                         className="group flex items-center justify-center cursor-pointer h-[54px]"
                     >
                         <div className={`transition-transform duration-200 ${isActive ? tilt : `rotate-0 group-hover:${tilt}`}`}>
-                            <div className={`flex h-[40px] items-center px-[20px] py-[8px] rounded-[12px] transition-all duration-200 group-hover:scale-105 ${isActive ? "bg-[#59ac64]" : "bg-[#cde3c9] group-hover:bg-[#59ac64]"}`}>
+                            <div style={{ padding: "8px 8px", backgroundColor: isActive ? "#59ac64" : "#cde3c9" }}
+                                className="flex h-[40px] items-center py-[8px] rounded-[12px] primarybutton"
+                            >
                                 <span
                                     className="whitespace-nowrap text-[20px] text-black"
                                     style={{ fontFamily: "Karla, sans-serif", fontWeight: isActive ? 700 : 400 }}
@@ -88,13 +90,13 @@ function FixedPillsBar({ activeSection }: { activeSection: SectionId }) {
                                 </span>
                             </div>
                         </div>
-                    </button>
+                    </button >
                 );
             })}
             {/* Scroll to top button — arrow pointing up */}
             <button
                 onClick={() => scrollTo("hero")}
-                className="bg-[#cde3c9] flex h-[40px] items-center p-[8px] rounded-[12px] cursor-pointer hover:bg-[#59ac64] transition-colors"
+                className="primarybutton flex h-[40px] items-center p-[8px] rounded-[12px] cursor-pointer"
                 aria-label="Back to top"
             >
                 <div className="-rotate-90">
@@ -103,7 +105,7 @@ function FixedPillsBar({ activeSection }: { activeSection: SectionId }) {
                     </svg>
                 </div>
             </button>
-        </div>
+        </div >
     );
 }
 
@@ -119,7 +121,7 @@ function NavIndicator({ activeSection, isTransitioning }: { activeSection: Secti
                         onClick={() => scrollTo(id)}
                         className="cursor-pointer rounded-[80px] w-[16px]"
                         style={{
-                            backgroundColor: isActive ? "#59ac64" : "#eaeaea",
+                            backgroundColor: isActive ? "#59ac64" : "#A9C3AD",
                             height: isActive && isTransitioning ? "47px" : "16px",
                             transition: isActive && isTransitioning
                                 ? "height 200ms cubic-bezier(0.4, 0, 0.2, 1)"
@@ -197,7 +199,7 @@ function Hero() {
             <div className="flex flex-wrap gap-[20px] items-center justify-center relative" style={{ zIndex: 1 }}>
                 <div className="flex items-center justify-center h-[57px]">
                     <div className="-rotate-6">
-                        <div className="bg-[#59ac64] flex h-[40px] items-center px-[20px] py-[8px] rounded-[12px]">
+                        <div className="bg-[#59ac64] flex h-[40px] items-center rounded-[12px]" style={{ padding: "8px 8px" }}>
                             <span className="font-['Karla',sans-serif] font-bold text-[20px] text-black whitespace-nowrap">Designed at:</span>
                         </div>
                     </div>
@@ -211,7 +213,7 @@ function Hero() {
                             className="group cursor-pointer flex items-center justify-center h-[50px]"
                         >
                             <div className={`transition-transform duration-200 rotate-0 group-hover:${tilt}`}>
-                                <div className="bg-[#cde3c9] group-hover:bg-[#59ac64] group-hover:scale-105 transition-all duration-200 flex h-[40px] items-center px-[20px] py-[8px] rounded-[12px]">
+                                <div style={{ padding: "8px 8px" }} className="primarybutton flex h-[40px] items-center px-[20px] py-[8px] rounded-[12px]">
                                     <span className="font-['Karla',sans-serif] font-normal text-[20px] text-black whitespace-nowrap">{name}</span>
                                 </div>
                             </div>
@@ -229,46 +231,75 @@ function CaseStudyCard({ company, showFooter }: { company: Company; showFooter?:
     return (
         <section
             id={id}
-            className="mx-[60px] h-screen snap-start flex flex-col pt-[160px]"
+            className="h-screen snap-start flex flex-col pt-[160px]"
         >
-            <div className="flex flex-col lg:flex-row gap-[40px] items-center px-[90px] pb-[40px] flex-1">
+            <div className="flex flex-col lg:flex-row gap-[8px] items-center pb-[40px] flex-1"
+                style={{
+                    padding: "0 1% 0 8%",
+                    marginLeft: '8%'
+
+                }}
+            >
                 <div className="flex flex-col gap-[24px] flex-1 max-w-[487px]">
                     <p className="font-['Karla',sans-serif] font-bold text-[#0b4e14] text-[clamp(30px,3.5vw,50px)] leading-tight">{study.title}</p>
                     <div className="flex flex-wrap gap-[10px]">
                         {study.tags.map((tag) => (
-                            <div key={tag.label} className={`flex h-[40px] items-center px-[20px] py-[8px] rounded-[80px] ${tag.textColor}`} style={{ backgroundColor: tag.color }}>
+                            <div key={tag.label} className={`chip ${tag.textColor}`} style={{ backgroundColor: tag.color }}>
                                 <span className="font-['Karla',sans-serif] font-normal text-[16px] whitespace-nowrap">{tag.label}</span>
                             </div>
                         ))}
                     </div>
                     <p className="font-['Karla',sans-serif] font-normal text-[20px] text-black max-w-[452px]">{study.description}</p>
-                    <div className="flex gap-[25px] items-center mt-[16px]">
+                    <div className="flex gap-[25px] items-center">
                         <div className="relative flex items-center justify-center p-[10px] border-b-2 border-black">
                             <span className="font-['Karla',sans-serif] font-normal text-[30px] text-black whitespace-nowrap">See Full Case </span>
                         </div>
                         <span className="font-['Karla',sans-serif] font-normal text-[30px] text-black">→</span>
                     </div>
                 </div>
-                <div className="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] flex-1 self-stretch relative">
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-['Inter',sans-serif] text-[30px]">
-                        demo video
-                    </div>
+
+                <div className="flex-1 w-[60%] rounded-[20px] overflow-hidden" style={{ border: "2px solid black" }}>
+                    <video id="backgroundVideo" autoPlay loop muted playsInline style={{ height: '100%', objectFit: "contain", }}>
+                        {/* video in src folder */}
+                        <source src="/sagesure.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
             {showFooter && (
-                <footer id="about" className="bg-[#070] flex items-center justify-between gap-[100px] px-[90px] py-[30px] overflow-hidden shrink-0">
+                <footer id="about" className="bg-[#070] flex items-center justify-between" style={{ padding: "0 8%" }}>
                     <div className="flex flex-col gap-[20px] flex-1 min-w-[200px]">
-                        <p className="font-['Karla',sans-serif] font-bold text-[16px] text-white">Designed, illustrated, and coded on the world wide web!</p>
+                        <p className="font-['Karla',sans-serif] text-[16px] text-white">Designed, illustrated, and coded on the world wide web ^-^</p>
                         <div className="flex flex-wrap gap-[30px]">
+                            <button className="linkbutton" style={{ color: "white" }}>
+                                <a rel="noopener noreferrer" target="_blank" href="mailto:avz7@cornell.edu">
+                                    <span>Email</span>
+                                    <span className="text-white text-[16px] -rotate-45 inline-block">→</span>
+                                </a>
+                            </button>
+
+                            <button className="linkbutton" style={{ color: "white" }}>
+                                <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/angelavzhu/">
+                                    <span>LinkedIn</span>
+                                    <span className="text-white text-[16px] -rotate-45 inline-block">→</span>
+                                </a>
+                            </button>
+
+                            <button className="linkbutton" style={{ color: "white" }}>
+                                <a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/file/d/1mwTy7CJU0mkgGk4Wxc7viRZWfRg0xl6z/view?usp=sharing">
+                                    <span>Resume</span>
+                                    <span className="text-white text-[16px] -rotate-45 inline-block">→</span>
+                                </a>
+                            </button>
+
+                            {/* 
                             {["Email", "LinkedIn", "Resume"].map((link) => (
                                 <div key={link} className="flex items-center gap-[4px]">
-                                    <span className="font-['Karla',sans-serif] font-normal text-[16px] text-white underline">{link}</span>
-                                    <span className="text-white text-[16px] -rotate-45 inline-block">→</span>
+
                                 </div>
-                            ))}
+                            ))} */}
                         </div>
                     </div>
-                    <img alt="Illustrated faces" className="h-[125px] object-contain shrink-0" src={img.src} />
+                    <img alt="Illustrated faces" className="h-[80%]" src={footer.src} />
                 </footer>
             )}
         </section>
@@ -317,8 +348,8 @@ export default function CaseStudies() {
     return (
         <>
             <FixedPillsBar activeSection={activeSection} />
-            <NavIndicator activeSection={activeSection} isTransitioning={isTransitioning} />
-            <div id="scroll-container" className="mx-[60px] h-screen overflow-y-scroll snap-y snap-mandatory">
+            {/* <NavIndicator activeSection={activeSection} isTransitioning={isTransitioning} /> */}
+            <div id="scroll-container" className="h-screen overflow-y-scroll snap-y snap-mandatory">
                 <Hero />
                 {COMPANIES.map((company, i) => (
                     <CaseStudyCard key={company} company={company} showFooter={i === COMPANIES.length - 1} />

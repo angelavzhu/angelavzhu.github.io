@@ -4,7 +4,7 @@ import sketch from "@/assets/sketch.jpg";
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-const BRUSH_RADIUS = 80;
+const BRUSH_RADIUS = 200;
 
 
 export default function App() {
@@ -56,7 +56,7 @@ export default function App() {
             const h = canvas.height;
             const { sx, sy, sw, sh } = coverRect(w, h);
             ctx.globalCompositeOperation = "source-over";
-            ctx.filter = "grayscale(1)";
+            ctx.filter = "grayscale(1) blur(4px)";
             ctx.drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
             ctx.filter = "none";
         };
@@ -119,6 +119,7 @@ export default function App() {
         <>
             <div className="absolute w-full h-screen overflow-hidden bg-white">
                 <video id="backgroundVideo" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+                    {/* video in src folder */}
                     <source src="/animated.mp4" type="video/mp4" />
                 </video>
 
@@ -129,7 +130,7 @@ export default function App() {
                     style={{ width: "100%", height: "100%" }}
                 />
             </div>
-            <button onClick={handleButton} className="hover:invert absolute bottom-16 right-[8%] z-100 bg-[#CDE3C9]"
+            <button onClick={handleButton} className="absolute bottom-8 right-[4%] z-100 primarybutton"
                 style={{ padding: "8px", borderRadius: "50%" }}>
                 {isPaused ? <PlayArrowIcon /> : <PauseIcon />}
             </button>

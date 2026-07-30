@@ -1,7 +1,7 @@
-import WIP from "./WIP";
+import Evallos from "./Evallos";
 
 export default function Home() {
     return (
-        <WIP />
+        <Evallos />
     );
 }
